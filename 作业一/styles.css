@@ -185,9 +185,10 @@ body#child
 }
 
 p.cha{
-		font-size:18px;
+	font-size:18px;
 	font-family:Microsoft Yahei;
 	color:#FFF;
+	padding:20px;
 }
 
 div#no2_text
@@ -217,3 +218,31 @@ div#return1
 	top: -262px;
 }
 
+/*护甲机制*/
+div#hu_text
+{
+	top:10px;
+	
+}
+
+h3.hu
+{
+	font-size:24px;
+	font-family:Microsoft Yahei;
+	left:3cm;
+	color:#FFF;
+}
+div#table
+{
+	position: absolute;
+	left: 596px;
+	top: 137px;
+	width: 200px;
+	height: 331px;
+}
+div#table1{
+	position: absolute;
+	left: 492px;
+	top: 579px;
+	width: 528px;
+}
