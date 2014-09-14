@@ -62,18 +62,6 @@ div#video
 {
 	margin: 60px 0px;
 }
-<<<<<<< HEAD
-
-body
-{
-	margin: 0px;
-}
-
-body#index
-{
-	background-image: url("image/2.png");
-	text-align: center;
-}
 
 h1{
 	color:#FFF;
@@ -160,5 +148,4 @@ p{
 	left: 404px;
 	top: 20px;
 }
-=======
->>>>>>> ade6896cd288835fbc23f4da7e4509d24911f4f2
+
