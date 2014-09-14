@@ -1,10 +1,82 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>无标题文档</title>
+	<link rel="stylesheet" type="text/css" href="../styles.css" />
+	<meta charset="utf-8">
+	<title>评价这个网站！</title>
 </head>
 
-<body>
+<body id="index">
+<div id="header">
+	<div id="title">评价表单</div>
+</div>	
+<div id="container">
+
+	<div id="navibar_top" class="darkbg marginside">
+		<a href="../游戏特色/charactor.html"><img id="navi" src="../image/游戏特色功能.png" alt="游戏特色功能" /></a>
+		<a href="../护甲机制/hujia.html"><img id="navi" src="../image/护甲机制解析.jpg" alt="护甲机制解析" /></a>
+		<a href="../魔抗机制/mokang.html"><img id="navi" src="../image/魔抗机制.jpg" alt="魔抗机制" /></a>
+		<a href="../游戏概率事件/gailv.html"><img id="navi" src="../image/游戏概率事件.jpg" alt="魔抗机制" /></a>
+	</div>
+	
+	<script type="text/javascript" event="onload">
+	window.onload = function onLoad()
+	{
+		var pos = location.href.indexOf("?");
+		if (pos>0)
+		{
+			alert("感谢您的反馈与建议！");
+		}
+	}
+	</script>
+	<script type="text/javascript">
+	function onSubmit()
+	{
+		var form=document.getElementById('form');
+		alert("sent!");
+		form.submit();
+		alert("sent!");
+	}
+	</script>
+	
+	<div id="content">
+		<div id="form" class="darkbg marginside">
+			<p id="formtitle">在这里填写你的建议吧！</p>
+			<form action="?submit" method="post">
+			<!--input type="hidden" name="submit" value="true"/-->
+			请问您对本网站整体印象如何？<br/>
+			<a id="formtable"> <table>
+				<tr><input type="radio" name="emp" value="0" checked="checked"/> 好 </tr>
+				<tr><input type="radio" name="emp" value="1" /> 很好 </tr>
+				<tr><input type="radio" name="emp" value="2" /> 非常好 </tr>
+			</table> </a>
+			<br/>
+			请问您认为本站哪些页面还需要增强？<br/>
+			<a id="formtable"> <table id="formtable">
+				<tr>
+				<input type="checkbox" name="none" /> 不存在那样的页面！
+				</tr>
+			</table> </a>
+			<br/>
+			请问您还有其他什么建议？<br/>
+			<textarea rows="5" cols="40"></textarea><br/>
+			<br/>
+			请问尊姓大名？<br/>
+			<input type="text" name="name" /><br/>
+			<br/>
+			<input type="submit" value="提交！"/>
+			<br/>
+			</form>
+		</div>
+	</div>
+	
+	<div id="navibar_bottom" class="darkbg marginside">
+		<a href="../英雄攻略/gonglue.html"><img id="navi" src="../image/英雄介绍.jpg" alt="英雄攻略" /></a>
+		<a href="../表单/biaodan.html"><img id="navi" src="../image/评价表单.jpg" alt="评价表单" /></a>
+		<a href="../团队介绍/tuandui.html"><img id="navi" src="../image/团队介绍.jpg" alt="团队介绍" /></a>
+	</div>
+	
+</div>
 </body>
+
 </html>
