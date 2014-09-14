@@ -9,7 +9,6 @@ body#index
 	background-position: center;
 	text-align: center;
 }
-
 div#header
 {
 }
@@ -78,7 +77,7 @@ p{
 	line-height:40px;
 	font-size:24px;
 	font-weight:bold;
-	}
+}
 #p1{
 	margin-left:1cm;
 	line-height:40px;
@@ -149,3 +148,78 @@ p{
 	top: 20px;
 }
 
+-------------游戏特色-----------------
+
+#no1
+{
+	position:absolute;
+}
+
+div#no1_image
+{
+	position: absolute;
+	left: 18px;
+	top: 67px;
+	width: 453px;
+	height: 302px;
+
+}
+
+div#no1_text
+{
+	position: absolute;
+	left: 70px;
+	top: 79px;
+	width: 650px;
+	height: 634px;
+}
+div#no1_par
+{
+	position: absolute;
+	left: 10px;
+	top: 458px;
+	width: 626px;
+	height: 142px;
+}
+h2.cha{
+	font-size:30px;
+	font-family:Microsoft Yahei;
+	left:3cm;
+	color:#FFF;
+}
+body#child
+{
+	background-image: url("image/2.png");
+}
+
+p.cha{
+		font-size:18px;
+	font-family:Microsoft Yahei;
+	color:#FFF;
+}
+
+div#no2_text
+{
+	position: absolute;
+	left: 812px;
+	top: 337px;
+	width: 650px;
+	height: 749px;
+}
+div#no2_image
+{
+	position: absolute;
+	left: 52px;
+	top: 56px;
+}
+div#no2_par
+{
+	position: absolute;
+	left: 46px;
+	top: 533px;
+}
+
+-------------护甲机制-----------------
+
+div#hujia_table{
+	
