@@ -246,3 +246,10 @@ div#table1{
 	top: 579px;
 	width: 528px;
 }
+/*英雄介绍*/
+div#huijin
+{
+	position: absolute;
+	left: 1168px;
+	top: 60px;
+}
