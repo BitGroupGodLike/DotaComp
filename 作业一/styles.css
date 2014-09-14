@@ -1,14 +1,48 @@
-body
+/* 定义部分 */
+
+body div p img
 {
 	margin: 0px;
+	padding: 0px;
 }
 
-body#index
+div.darkbg
 {
-	background-image: url("image/2.png");
-	background-position: center;
-	text-align: center;
+	background-color: rgba(0,0,0,0.4)
 }
+
+div.lightbg
+{
+	background-color: rgba(255,255,255,0.4)
+}
+
+div.graybg
+{
+	background-color: rgba(144,144,144,0.4)
+}
+
+div.floatleft
+{
+	float: left;
+}
+
+div.floatright
+{
+	float: right;
+}
+
+div.marginside
+{
+	margin-left: 6px;
+	margin-right: 6px;
+}
+
+div.marginedge
+{
+	margin: 6px;
+}
+
+/* 公共部分 */
 
 div#header
 {
@@ -20,7 +54,8 @@ div#title
 	font-family: Trajan Pro;
 	text-align: center;
 	font-size: 36px;
-	padding: 12px;
+	padding-top: 6px;
+	padding-bottom: 5px;
 }
  
 div#container
@@ -30,24 +65,23 @@ div#container
 	margin-right:auto;
 }
 
-div.darkbg
+div#content
 {
-	background-color: rgba(0,0,0,0.4)
-}
-
-div#main
-{
-	margin-top: 24px;
-	margin-bottom: 172px;
-	padding: 40px 10px;
+	overflow: hidden;
 }
 
 div#navibar_top
 {
+	margin-top: 0px;
+	margin-bottom: 10px;
+	padding: 20px 10px;
 }
 
 div#navibar_bottom
 {
+	margin-top: 10px;
+	margin-bottom: 128px;
+	padding: 20px 10px;
 }
 
 img#navi
@@ -58,94 +92,53 @@ img#navi
 	box-shadow: 0 0 25px black;
 }
 
+/* 主页部分 */
+
+body#index
+{
+	background-image: url("image/2.png");
+	background-position: top center;
+	background-repeat: y-repeat;
+	text-align: center;
+}
+
 div#video
 {
-	margin: 60px 0px;
+	padding-top: 83px;
+	padding-bottom: 80px;
+	margin: 6px;
 }
 
-h1{
-	color:#FFF;
- 	text-align: center;
- 	font-size:36px;
-	font-weight:bold;
-	}
-h2{
-	font-size:30px;
-	font-weight:bold;
-}
-p{
-	margin-left:1cm;
-	line-height:40px;
-	font-size:24px;
-	font-weight:bold;
-	}
-#p1{
-	margin-left:1cm;
-	line-height:40px;
-	font-size:24px;
-	font-weight:bold;
-	color:#FFF;
-}
-#show{
-	width: 1521px;
-	height: 900px;
-	margin: 0 auto;
-	position: absolute;
-	left: 24px;
-	top: 76px;
+/* 团队介绍部分 */
+
+body#tuandui
+{
+	background-image: url("image/2.png");
+	background-position: top center;
+	background-repeat: y-repeat;
+	text-align: center;
 }
 
-#show1{
-	position: absolute;
-	left: 55px;
-	top: 31px;
-	height: 395px;
-	width: 670px;
+div#show
+{
+	width: 480px;
+	height: 282px;
+	margin: 6px;
+	padding: 10px;
 }
 
-#image1{
-	position: absolute;
-	left: 376px;
-	top: 8px;
-	width: 230px;
-	height: 373px;
+div#showtext
+{
+	padding: 0 10px;
+	font-family: Microsoft Yahei Light;
+	text-align: left;
+	color: #FFF;
 }
 
-#show2{
-	position: absolute;
-	left: 784px;
-	top: 27px;
-	width: 670px;
-	height: 395px;
+div#showimage
+{
+	margin: 6px;
+	float: right;
 }
 
-#show3{
-	position: absolute;
-	width: 670px;
-	height: 395px;
-	left: 53px;
-	top: 463px;
-}
-
-#image3{
-	position: absolute;
-	left: 272px;
-	top: 48px;
-	width: 386px;
-	height: 301px;
-}
-
-#show4{
-	position: absolute;
-	width: 670px;
-	height: 395px;
-	left: 784px;
-	top: 463px;
-}
-
-#image4{
-	position: absolute;
-	left: 404px;
-	top: 20px;
-}
 
