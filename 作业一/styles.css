@@ -53,3 +53,89 @@ body#index
 	background-image: url("image/2.png");
 	text-align: center;
 }
+
+h1{
+	color:#FFF;
+ 	text-align: center;
+ 	font-size:36px;
+	font-weight:bold;
+	}
+h2{
+	font-size:30px;
+	font-weight:bold;
+}
+p{
+	margin-left:1cm;
+	line-height:40px;
+	font-size:24px;
+	font-weight:bold;
+	}
+#p1{
+	margin-left:1cm;
+	line-height:40px;
+	font-size:24px;
+	font-weight:bold;
+	color:#FFF;
+}
+#show{
+	width: 1521px;
+	height: 900px;
+	margin: 0 auto;
+	position: absolute;
+	left: 24px;
+	top: 76px;
+}
+
+#show1{
+	position: absolute;
+	left: 55px;
+	top: 31px;
+	height: 395px;
+	width: 670px;
+}
+
+#image1{
+	position: absolute;
+	left: 376px;
+	top: 8px;
+	width: 230px;
+	height: 373px;
+}
+
+#show2{
+	position: absolute;
+	left: 784px;
+	top: 27px;
+	width: 670px;
+	height: 395px;
+}
+
+#show3{
+	position: absolute;
+	width: 670px;
+	height: 395px;
+	left: 53px;
+	top: 463px;
+}
+
+#image3{
+	position: absolute;
+	left: 272px;
+	top: 48px;
+	width: 386px;
+	height: 301px;
+}
+
+#show4{
+	position: absolute;
+	width: 670px;
+	height: 395px;
+	left: 784px;
+	top: 463px;
+}
+
+#image4{
+	position: absolute;
+	left: 404px;
+	top: 20px;
+}
