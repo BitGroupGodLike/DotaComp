@@ -266,8 +266,8 @@ div#no2_par
 div#return1
 {
 	position: absolute;
-	left: 320px;
-	top: -262px;
+	left: 314px;
+	top: -249px;
 }
 
 /*护甲机制*/
@@ -287,8 +287,8 @@ h3.hu
 div#table
 {
 	position: absolute;
-	left: 596px;
-	top: 137px;
+	left: 440px;
+	top: 134px;
 	width: 200px;
 	height: 331px;
 }
@@ -298,10 +298,51 @@ div#table1{
 	top: 579px;
 	width: 528px;
 }
+div#return2{
+	position: absolute;
+	left: 876px;
+	top: 110px;
+}
 /*英雄介绍*/
 div#huijin
 {
 	position: absolute;
 	left: 1168px;
 	top: 60px;
+}
+/*魔抗机制*/
+div#mo_text
+{
+	top:10px;
+}
+
+div#mo_image1
+{
+	position: absolute;
+	left: 278px;
+	top: 317px;
+}
+div#return3
+{
+	position: absolute;
+	left: 1147px;
+	top: 240px;
+}
+/*游戏概率*/
+p.text1
+{
+	text-indent: 2em;
+}
+div#sui_image
+{
+	position: absolute;
+	left: 234px;
+	top: 83px;
+}
+div#return4
+{
+	position: absolute;
+	left: 889px;
+	top: 102px;
+
 }
