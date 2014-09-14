@@ -6,6 +6,12 @@ body div p img
 	padding: 0px;
 }
 
+body
+{
+	background-position: top center;
+	background-repeat: repeat;
+}
+
 p
 {
 	font-family: Tarjan Pro, Microsoft Yahei Light;
@@ -51,6 +57,21 @@ div.marginedge
 
 div#header
 {
+	height: 56px;
+	overflow: hidden;
+}
+ 
+div#container
+{
+	width: 1024px;
+	overflow: hidden;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+div#footer
+{
+	height: 120px;
 	overflow: hidden;
 }
 
@@ -61,16 +82,8 @@ div#title
 	text-align: center;
 	font-size: 36px;
 	padding-top: 6px;
-	padding-bottom: 5px;
 	overflow: hidden;
 	white-space:nowrap;
-}
- 
-div#container
-{
-	width: 1024px;
-	margin-left:auto;
-	margin-right:auto;
 }
 
 div#content
@@ -89,17 +102,30 @@ div#navibar_top
 div#navibar_bottom
 {
 	margin-top: 10px;
-	margin-bottom: 128px;
+	margin-bottom: 0px;
 	padding: 20px 10px;
 	text-align: center;
 }
 
 img#navi
 {
-	width: 213;
-	height: 136;
+	width: 213px;
+	height: 136px;
 	border: 0;
 	box-shadow: 0 0 25px black;
+}
+
+div#homelinkbox
+{
+	width: 646px;
+	margin: 0px auto;
+	padding-left: 50px;
+}
+
+div#homelink
+{
+	height: 96px;
+	margin: 22px auto;
 }
 
 /* 主页部分 */
@@ -107,8 +133,6 @@ img#navi
 body#index
 {
 	background-image: url("image/2.png");
-	background-position: top center;
-	background-repeat: y-repeat;
 }
 
 div#video
@@ -124,9 +148,6 @@ div#video
 body#tuandui
 {
 	background-image: url("image/2.png");
-	background-position: top center;
-	background-repeat: y-repeat;
-	text-align: center;
 }
 
 div#show
@@ -156,14 +177,12 @@ div#showimage
 body#biaodan
 {
 	background-image: url("image/2.png");
-	background-position: top center;
-	background-repeat: y-repeat;
-	text-align: center;
 }
 
 div#form
 {
-	height: 616px;
+	overflow: auto;
+	height: 516px;
 	margin: 6px;
 	padding: 50px 160px;
 	font-family: Microsoft Yahei Light;
@@ -187,10 +206,9 @@ input
 	font-size: 15px;
 }
 
-span#warn
+textarea
 {
 	font-size: 15px;
-	color: #FF0000;
 }
 
 /* 游戏特色 */
