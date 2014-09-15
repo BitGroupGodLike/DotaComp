@@ -1,6 +1,6 @@
 /* 定义部分 */
 
-body div p img
+body div p img h1 h2 h3
 {
 	margin: 0px;
 	padding: 0px;
@@ -15,6 +15,13 @@ body
 p
 {
 	font-family: Tarjan Pro, Microsoft Yahei Light;
+	color: #FFF
+}
+
+h3
+{
+	font-family: Tarjan Pro, Microsoft Yahei;
+	color: #FFF
 }
 
 div.darkbg
@@ -51,6 +58,11 @@ div.marginside
 div.marginedge
 {
 	margin: 6px;
+}
+
+p.indent
+{
+	text-indent: 2em;
 }
 
 /* 公共部分 */
@@ -347,20 +359,28 @@ div#return3
 	top: 240px;
 }
 /*游戏概率*/
-p.text1
+
+div#randcontent
 {
-	text-indent: 2em;
+	padding: 16px;
+	overflow: auto;
+	height: 596px;
+	margin: 6px;
 }
-div#sui_image
+
+div#randtext
 {
-	position: absolute;
-	left: 234px;
-	top: 83px;
+	
 }
+
+div#randimage
+{
+	margin: 6px;
+}
+
 div#return4
 {
 	position: absolute;
 	left: 889px;
 	top: 102px;
-
 }
