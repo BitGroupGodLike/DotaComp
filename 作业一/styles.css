@@ -1,20 +1,37 @@
 /* 定义部分 */
 
-body div p img
+body, div, p, img, h1, h2, h3
 {
 	margin: 0px;
 	padding: 0px;
+	font-family: Tarjan Pro, Microsoft Yahei Light;
 }
 
 body
 {
-	background-position: top center;
+	margin: 0px;
+	padding: 0px;
+	background-position: center;
+	background-attachment: fixed;
 	background-repeat: repeat;
+}
+
+div
+{
+	font-family: Tarjan Pro, Microsoft Yahei Light;
+	color: #FFF;
 }
 
 p
 {
 	font-family: Tarjan Pro, Microsoft Yahei Light;
+	color: #FFF;
+}
+
+h3
+{
+	font-family: Tarjan Pro, Microsoft Yahei;
+	color: #FFF;
 }
 
 div.darkbg
@@ -53,17 +70,47 @@ div.marginedge
 	margin: 6px;
 }
 
+p.indent
+{
+	text-indent: 2em;
+}
+
+a:link
+{ 
+color:#DDD; 
+text-decoration:none; 
+}
+a:visited
+{ 
+color:#AAA; 
+text-decoration:none; 
+}
+a:hover
+{ 
+color:#555; 
+text-decoration:none; 
+}
+a:active
+{ 
+color:#000; 
+text-decoration:none; 
+}
+
 /* 公共部分 */
 
 div#header
 {
-	height: 56px;
+	height: 34px;
 	overflow: hidden;
+	padding-bottom: 6px;
+	background-image: url("image/header.png");
+	background-position: bottom center;
 }
  
 div#container
 {
 	width: 1024px;
+	position: relative;
 	overflow: hidden;
 	margin-left:auto;
 	margin-right:auto;
@@ -71,8 +118,25 @@ div#container
 
 div#footer
 {
-	height: 120px;
+	height: 130px;
 	overflow: hidden;
+	background-image: url("image/footer.png");
+	background-position: top center;
+}
+
+div#header_content
+{
+	width: 1024px;
+	overflow: hidden;
+	margin-left:auto;
+	margin-right:auto;
+	padding: 6px 0px;
+}
+
+div#header_text
+{
+	margin: 0px 10px;
+	padding: 0px;
 }
 
 div#title
@@ -81,7 +145,8 @@ div#title
 	font-family: Trajan Pro;
 	text-align: center;
 	font-size: 36px;
-	padding-top: 6px;
+	padding: 8px 0px;
+	margin: 6px;
 	overflow: hidden;
 	white-space:nowrap;
 }
@@ -93,16 +158,14 @@ div#content
 
 div#navibar_top
 {
-	margin-top: 0px;
-	margin-bottom: 10px;
+	margin: 6px;
 	padding: 20px 10px;
 	text-align: center;
 }
 
 div#navibar_bottom
 {
-	margin-top: 10px;
-	margin-bottom: 0px;
+	margin: 6px;
 	padding: 20px 10px;
 	text-align: center;
 }
@@ -132,7 +195,7 @@ div#homelink
 
 body#index
 {
-	background-image: url("image/2.png");
+	background-image: url("image/2c.png");
 }
 
 div#video
@@ -147,7 +210,7 @@ div#video
 
 body#tuandui
 {
-	background-image: url("image/2.png");
+	background-image: url("image/2c.png");
 }
 
 div#show
@@ -176,15 +239,14 @@ div#showimage
 
 body#biaodan
 {
-	background-image: url("image/2.png");
+	background-image: url("image/2c.png");
 }
 
 div#form
 {
 	overflow: auto;
-	height: 516px;
 	margin: 6px;
-	padding: 50px 160px;
+	padding: 80px 160px;
 	font-family: Microsoft Yahei Light;
 	font-size: 25px;
 	text-align: left;
@@ -213,15 +275,18 @@ textarea
 
 /* 游戏特色 */
 
-#no1
+body#character
 {
-	position:absolute;
+	background-image: url("image/2c.png");
+}
+
+div#content.character_fixheight
+{
+	height: 1200px;
 }
 
 div#no1_image
 {
-	left: 23px;
-	top: 63px;
 	width: 453px;
 	height: 302px;
 	padding: 15px;
@@ -237,9 +302,6 @@ div#no1_text
 }
 div#no1_par
 {
-	position:absolute;
-	left: 1px;
-	top: 487px;
 	width: 626px;
 	height: 142px;
 }
@@ -251,7 +313,7 @@ h2.cha{
 }
 body#child
 {
-	background-image: url("image/2.png");
+	background-image: url("image/2c.png");
 }
 
 p.cha{
@@ -271,21 +333,10 @@ div#no2_text
 }
 div#no2_image
 {
-	left: 52px;
-	top: 56px;
 	padding:30px
 }
 div#no2_par
 {
-	position: absolute;
-	left: 17px;
-	top: 595px;
-}
-div#return1
-{
-	position: absolute;
-	left: 314px;
-	top: -249px;
 }
 
 /*护甲机制*/
@@ -347,20 +398,31 @@ div#return3
 	top: 240px;
 }
 /*游戏概率*/
-p.text1
+
+body#gailv
 {
-	text-indent: 2em;
+	background-image: url("image/2c.png");
 }
-div#sui_image
+
+div#randcontent
 {
-	position: absolute;
-	left: 234px;
-	top: 83px;
+	padding: 16px;
+	overflow: auto;
+	margin: 6px;
 }
+
+div#randtext
+{
+}
+
+div#randimage
+{
+	margin: 6px;
+}
+
 div#return4
 {
 	position: absolute;
 	left: 889px;
 	top: 102px;
-
 }
