@@ -27,13 +27,6 @@
 	</div>
 </div>	
 <div id="container">
-
-	<div id="navibar_top" class="darkbg">
-		<a href="../游戏特色/charactor.html"><img id="navi" src="../image/游戏特色功能.png" alt="游戏特色功能" /></a>
-		<a href="../护甲机制/hujia.html"><img id="navi" src="../image/护甲机制解析.jpg" alt="护甲机制解析" /></a>
-		<a href="../魔抗机制/mokang.html"><img id="navi" src="../image/魔抗机制.jpg" alt="魔抗机制" /></a>
-		<a href="../游戏概率事件/gailv.html"><img id="navi" src="../image/游戏概率事件.jpg" alt="游戏概率事件" /></a>
-	</div>
 	
 	<script type="text/javascript" event="onload">
 	window.onload = function onLoad()
@@ -55,34 +48,41 @@
 	}
 	</script>
 	
+	<div id="title"></div>
 	<div id="title" class="darkbg">评价表单</div>
 	<div id="content">
 		<div id="form" class="darkbg marginside">
 			<p id="formtitle">在这里填写你的建议吧！</p>
 			<form action="?submit" method="post">
-			<!--input type="hidden" name="submit" value="true"/-->
-			请问您对本网站整体印象如何？<br/>
-			<a id="formtable"> <table>
-				<tr><input type="radio" name="emp" value="0" checked="checked"/> 好 </tr>
-				<tr><input type="radio" name="emp" value="1" /> 很好 </tr>
-				<tr><input type="radio" name="emp" value="2" /> 非常好 </tr>
-			</table> </a>
-			<br/>
-			请问您认为本站哪些页面还需要增强？<br/>
-			<a id="formtable"> <table id="formtable">
-				<tr>
-				<input type="checkbox" name="none" /> 不存在那样的页面！
-				</tr>
-			</table> </a>
-			<br/>
-			请问您还有其他什么建议？<br/>
-			<textarea rows="3" cols="40"></textarea><br/>
-			<br/>
-			请问尊姓大名？<br/>
-			<input type="text" name="name" /><br/>
-			<br/>
-			<input type="submit" value="提交！"/>
-			<br/>
+				<!--input type="hidden" name="submit" value="true"/-->
+				<p>
+				请问您对本网站整体印象如何？
+				</p>
+				<a id="formtable"> <table>
+					<td><input type="radio" name="emp" id="e0" value="0" checked="checked"/><label for="e0"> 好 </label></td>
+					<td><input type="radio" name="emp" id="e1" value="1" /><label for="e1"> 很好 </label></td>
+					<td><input type="radio" name="emp" id="e2" value="2" /><label for="e2"> 非常好 </label></td>
+				</table> </a> 
+				<p>
+				请问您认为本站哪些页面还需要增强？
+				</p>
+					<a id="formtable"> <table id="formtable">
+						<td>
+						<input type="checkbox" name="none" id="snone"/>
+						<label for="snone"> 不存在那样的页面！ </label>
+						</td>
+					</table> </a>
+				<p>
+				请问您还有其他什么建议？
+				</p>
+				<textarea rows="3" cols="40"></textarea>
+				<p>
+				请问尊姓大名？
+				</p>
+				<input type="text" name="name" />
+				<br/>
+				<input type="submit" value="提交！"/>
+				<br/>
 			</form>
 		</div>
 	</div>
@@ -94,13 +94,6 @@
 	</div>
 	
 </div>
-<div id="footer">
-	<div id="homelinkbox">
-		<a href="../index.html">
-			<div id="homelink"></div>
-		</a>
-	</div>
-</div>	
 </body>
 
 </html>

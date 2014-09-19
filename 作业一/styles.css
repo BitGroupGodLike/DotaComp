@@ -1,6 +1,6 @@
 /* 定义部分 */
 
-body, div, p, img, h1, h2, h3
+body, div, img, h1, h2, h3
 {
 	margin: 0px;
 	padding: 0px;
@@ -24,11 +24,18 @@ div
 
 p
 {
+	margin: 12px 0px;
+	padding: 0px;
 	font-family: Tarjan Pro, Microsoft Yahei Light;
 	color: #FFF;
 }
 
-h3
+h1
+{
+	font-family: Tarjan Pro;
+}
+
+h2, h3
 {
 	font-family: Tarjan Pro, Microsoft Yahei;
 	color: #FFF;
@@ -93,6 +100,15 @@ text-decoration:none;
 a:active
 { 
 color:#000; 
+text-decoration:none; 
+}
+
+form a:link,
+form a:visited,
+form a:active,
+form a:hover
+{ 
+color:#FFF; 
 text-decoration:none; 
 }
 
