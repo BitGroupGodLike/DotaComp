@@ -25,20 +25,22 @@ div
 
 p
 {
-	margin: 12px 0px;
-	padding: 0px;
+	margin: 12px 8px;
+	text-indent: 2em;
 	font-family: Tarjan Pro, Microsoft Yahei;
 	color: #FFF;
 }
 
 h1
 {
+	margin: 12px 0px;
 	font-family: Tarjan Pro;
 }
 
 h2, h3
 {
 	font-family: Tarjan Pro, Microsoft Yahei;
+	margin: 12px 0px;
 	color: #FFF;
 }
 
@@ -190,6 +192,89 @@ div#homelink
 	margin: 22px auto;
 }
 
+/* 滑动样式 */
+
+div#slideshow_container
+{
+	margin: 6px;
+	padding: 10px;
+	height: 560px;
+}
+
+div#slideshow_buttonleft
+{
+	height: 560px;
+	float: left;
+	opacity: 0.5;
+}
+
+div#slideshow_buttonright
+{
+	height: 560px;
+	float: right;
+	opacity: 0.5;
+}
+
+div#slideshow_buttonleft:hover
+{
+	opacity: 0.8;
+}
+
+div#slideshow_buttonright:hover
+{
+	opacity: 0.8;
+}
+
+div#slideshow_buttonleft:active
+{
+	opacity: 0.8;
+	background-color: rgba(0,0,0,0.5);
+}
+
+div#slideshow_buttonright:active
+{
+	opacity: 0.8;
+	background-color: rgba(0,0,0,0.5);
+}
+
+div#slideshow_buttonleft img,
+div#slideshow_buttonright img
+{
+	height: 560px;
+}
+
+div#slideshow_content
+{
+	position: relative;
+	float: left;
+	margin: 30px;
+	padding: 6px;
+	width: 780px;
+	height: 540px;
+	overflow: hidden;
+}
+
+div#slideshow_inner
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 8500px;
+}
+
+div#slideshow_inner div.sspage
+{
+	width: 720px;
+	margin: 0px 30px;
+	float: left;
+	text-align: center;
+}
+
+div#slideshow_inner div.sspage p
+{
+	text-align: left;
+}
+
 /* 主页部分 */
 
 body#index
@@ -218,6 +303,8 @@ div#indextitle
 	margin-top: 60px;
 	margin-bottom: 20px;
 }
+
+/* 主页滚动样式 */
 
 div#scrollshow_container
 {
@@ -406,37 +493,7 @@ div#cha_text
 	height:2550px;
 	margin:20px;
 }
-div#ch1
-{
-	position: absolute;
-	width: 697px;
-	height: 552px;
-	left: 120px;
-	top: 85px;
-}
-div#ch2
-{
-	position: absolute;
-	left: 121px;
-	top: 703px;
-	width: 697px;
-	height: 552px;
-}
-div#ch3
-{
-	position: absolute;
-	width: 697px;
-	height: 587px;
-	top: 1305px;
-	left=171px;
-	left: 122px;
-}
-div#ch4
-{
-	position: absolute;
-	left: 121px;
-	top: 1950px;
-}
+
 /*护甲机制*/
 div#hu_text
 {
