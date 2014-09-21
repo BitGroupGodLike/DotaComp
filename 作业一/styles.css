@@ -6,6 +6,7 @@ body, div, img, h1, h2, h3
 	padding: 0px;
 	font-family: Tarjan Pro, Microsoft Yahei;
 	color: #FFF;
+	text-align: left;
 }
 
 body
@@ -20,7 +21,6 @@ body
 div
 {
 	font-family: Tarjan Pro, Microsoft Yahei;
-	color: #FFF;
 }
 
 p
@@ -28,20 +28,27 @@ p
 	margin: 12px 8px;
 	text-indent: 2em;
 	font-family: Tarjan Pro, Microsoft Yahei;
-	color: #FFF;
 }
 
 h1
 {
 	margin: 12px 0px;
 	font-family: Tarjan Pro;
+	font-size: 30px;
 }
 
-h2, h3
+h2
 {
 	font-family: Tarjan Pro, Microsoft Yahei;
 	margin: 12px 0px;
-	color: #FFF;
+	font-size: 28px;
+}
+
+h3
+{
+	font-family: Tarjan Pro, Microsoft Yahei;
+	margin: 12px 0px;
+	font-size: 20px;
 }
 
 div.darkbg
@@ -179,6 +186,12 @@ div#content
 	overflow: hidden;
 }
 
+div#text_container
+{
+	padding: 16px;
+	margin: 6px;
+}
+
 div#homelinkbox
 {
 	width: 646px;
@@ -302,6 +315,7 @@ div#indextitle
 {
 	margin-top: 60px;
 	margin-bottom: 20px;
+	text-align: center;
 }
 
 /* 主页滚动样式 */
@@ -393,15 +407,11 @@ div#form
 {
 	margin: 10px 6px;
 	padding: 120px 160px;
-	font-family: Microsoft Yahei;
-	font-size: 25px;
 	text-align: left;
-	color: #FFF;
 }
 
 #formtitle
 {
-	font-size: 30px;
 }
 
 #formtable
@@ -409,12 +419,18 @@ div#form
 	font-size: 15px;
 }
 
-input
+div#form p
+{
+	font-size: 20px;
+	text-indent: 0em;
+}
+
+div#form input
 {
 	font-size: 15px;
 }
 
-textarea
+div#form textarea
 {
 	font-size: 15px;
 }
