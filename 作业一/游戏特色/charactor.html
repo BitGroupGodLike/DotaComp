@@ -29,86 +29,87 @@
 <div id="container">
 	<div id="title" class="darkbg">游戏特色</div>
 	<div id="content">
-    <div id="slideshow_container" class="darkbg">
-		<div id="slideshow_buttonleft">
-		<a onclick="prevSlidePage();"><img src="../image/slidebutton_l.png"/></a>
-		</div>
-		<div id="slideshow_content">
-			<div id="slideshow_inner">
-				<div class="sspage">
-					<h2>No.1游戏画面</h2>
-					<img src="../image/27_130708101833_1.jpg" height="340"  alt=""/>
-					<p>				dota2采用最新Source引擎，从英雄模型到技能特效全面改进，对诸多细节也做了处理，每个英雄都有几十句语音还有各自的重伤濒死动画特效，天气特效以及水面倒影等，可以说玩dota2就是视觉上的享受。
-					</p> 
-				</div>
-				<div class="sspage">
-					<h2>No.2全新系统</h2>
-					<img src="../image/duan.png" height="340"  alt=""/> 
-					<p>dota2全新系统：科学匹配系统支持公会战队公平竞技。断线重连系统支持断网关机重连。教练系统帮助玩家快速上手。内置语言系统让整局游戏激战不断。
-					</p>
-				</div>
-				<div class="sspage">
-					<h2>No.3观战功能</h2>
-					<img src="../image/tese3.png" height="340"  alt=""/> 
-					<p>dota2全新观战功能：支持解说和第一视角，录像还原临场体验。观战系统支持所有比赛，随时关注好友或赛事状况。详尽的数据统计和内置解说，丰富观战体验。录像下载保留全部观战功能，可调进度便于研究对局。
-					</p>
-				</div>
-				<div class="sspage">
-					<h2>No.4个性饰品</h2>
-					<img src="../image/tese4.png" height="340"  alt=""/> 
-					<p>多种个性化饰品道具，打造独有游戏体验。掉落开箱集换散件，搭配炫酷英雄套装。收集独特信使与守卫，买鸡买眼也能秀出个性，更有重铸与镶嵌系统，提供更多饰品玩法，所有道具均不影响游戏平衡，体验公平基础上的个性化游戏环境。
-					</p>
+		<div id="slideshow_container" class="darkbg">
+			<div id="slideshow_buttonleft">
+			<a onclick="prevSlidePage();"><img src="../image/slidebutton_l.png"/></a>
+			</div>
+			<div id="slideshow_content">
+				<div id="slideshow_inner">
+					<div name="sspage" class="sspage">
+						<h2>No.1游戏画面</h2>
+						<img src="../image/27_130708101833_1.jpg" height="340"  alt=""/>
+						<p>				dota2采用最新Source引擎，从英雄模型到技能特效全面改进，对诸多细节也做了处理，每个英雄都有几十句语音还有各自的重伤濒死动画特效，天气特效以及水面倒影等，可以说玩dota2就是视觉上的享受。
+						</p> 
+					</div>
+					<div name="sspage" class="sspage">
+						<h2>No.2全新系统</h2>
+						<img src="../image/duan.png" height="340"  alt=""/> 
+						<p>dota2全新系统：科学匹配系统支持公会战队公平竞技。断线重连系统支持断网关机重连。教练系统帮助玩家快速上手。内置语言系统让整局游戏激战不断。
+						</p>
+					</div>
+					<div name="sspage" class="sspage">
+						<h2>No.3观战功能</h2>
+						<img src="../image/tese3.png" height="340"  alt=""/> 
+						<p>dota2全新观战功能：支持解说和第一视角，录像还原临场体验。观战系统支持所有比赛，随时关注好友或赛事状况。详尽的数据统计和内置解说，丰富观战体验。录像下载保留全部观战功能，可调进度便于研究对局。
+						</p>
+					</div>
+					<div name="sspage" class="sspage">
+						<h2>No.4个性饰品</h2>
+						<img src="../image/tese4.png" height="340"  alt=""/> 
+						<p>多种个性化饰品道具，打造独有游戏体验。掉落开箱集换散件，搭配炫酷英雄套装。收集独特信使与守卫，买鸡买眼也能秀出个性，更有重铸与镶嵌系统，提供更多饰品玩法，所有道具均不影响游戏平衡，体验公平基础上的个性化游戏环境。
+						</p>
+					</div>
 				</div>
 			</div>
-        </div>
-		<div id="slideshow_buttonright">
-		<a onclick="nextSlidePage();"><img src="../image/slidebutton_r.png"/></a>
+			<div id="slideshow_buttonright">
+			<a onclick="nextSlidePage();"><img src="../image/slidebutton_r.png"/></a>
+			</div>
+			<script type="text/javascript">
+				var inner=document.getElementById("slideshow_inner");
+				var currentIndex=0;
+				var maxIndex=document.getElementsByName("sspage").length;
+				alert(maxIndex);
+				var singleWidth=780;
+				var currentPos=0;
+				var animIntev=0;
+				
+				function updateSlideMove()
+				{
+					if(currentIndex*singleWidth-51>currentPos)
+						currentPos+=50;
+					else if(currentIndex*singleWidth+51<currentPos)
+						currentPos-=50;
+					else
+					{
+						currentPos=currentIndex*singleWidth;
+						window.clearInterval(animIntev);
+						animIntev=0;
+					}
+					inner.style.left=-currentPos+"px";
+				}
+				
+				function nextSlidePage()
+				{
+					currentIndex++;
+					if(currentIndex>=maxIndex)currentIndex=0;
+					if(animIntev==0)
+					{
+						animIntev = window.setInterval("updateSlideMove()",16.66666667);
+					}
+					inner.style.left=-currentPos+"px";
+				}
+				
+				function prevSlidePage()
+				{
+					currentIndex--;
+					if(currentIndex<0)currentIndex=maxIndex-1;
+					if(animIntev==0)
+					{
+						animIntev = window.setInterval("updateSlideMove()",16.66666667);
+					}
+				}
+			</script>
 		</div>
-		<script type="text/javascript">
-			var inner=document.getElementById("slideshow_inner");
-			var currentIndex=0;
-			var maxIndex=4;
-			var singleWidth=780;
-			var currentPos=0;
-			var animIntev=0;
-			
-			function updateSlideMove()
-			{
-				if(currentIndex*singleWidth-41>currentPos)
-					currentPos+=40;
-				else if(currentIndex*singleWidth+41<currentPos)
-					currentPos-=40;
-				else
-				{
-					currentPos=currentIndex*singleWidth;
-					window.clearInterval(animIntev);
-					animIntev=0;
-				}
-				inner.style.left=-currentPos+"px";
-			}
-			
-			function nextSlidePage()
-			{
-				currentIndex++;
-				if(currentIndex>=maxIndex)currentIndex=0;
-				if(animIntev==0)
-				{
-					animIntev = window.setInterval("updateSlideMove()",16.66666667);
-				}
-				inner.style.left=-currentPos+"px";
-			}
-			
-			function prevSlidePage()
-			{
-				currentIndex--;
-				if(currentIndex<0)currentIndex=maxIndex-1;
-				if(animIntev==0)
-				{
-					animIntev = window.setInterval("updateSlideMove()",16.66666667);
-				}
-			}
-		</script>
-	</div>
 	</div>
 </div>
 
