@@ -26,10 +26,127 @@
 		</div>
 	</div>
 </div>	
-<div id="container">
+<div id="indexcontainer">
 
-	<div id="title" class="darkbg">DOTA2科学院</div>
+	<div id="indextitle">
+		<img src="image/title.png" alt="DOTA2科学院" />
+	</div>
 	
+	<div id="scrollshow_container">
+		<div class="sscontent">
+			<a href="游戏特色/charactor.html"><img class="origin" src="image/游戏特色功能.png" alt="游戏特色功能" /></a>
+			<img class="reflect" src="image/游戏特色功能.png" />
+		</div>
+		<div class="sscontent">
+			<a href="护甲机制/hujia.html"><img class="origin" src="image/护甲机制解析.jpg" alt="护甲机制解析" /></a>
+			<img class="reflect" src="image/护甲机制解析.jpg" />
+		</div>
+		<div class="sscontent">
+			<a href="魔抗机制/mokang.html"><img class="origin" src="image/魔抗机制.jpg" alt="魔抗机制" /></a>
+			<img class="reflect" src="image/魔抗机制.jpg" />
+		</div>
+		<div class="sscontent">
+			<a href="游戏概率事件/gailv.html"><img class="origin" src="image/游戏概率事件.jpg" alt="游戏概率事件" /></a>
+			<img class="reflect" src="image/游戏概率事件.jpg" />
+		</div>
+		<div class="sscontent">
+			<a href="英雄攻略/gonglue.html"><img class="origin" src="image/英雄介绍.jpg" alt="英雄介绍" /></a>
+			<img class="reflect" src="image/英雄介绍.jpg" />
+		</div>
+		<div class="sscontent">
+			<a href="表单/biaodan.html"><img class="origin" src="image/评价表单.jpg" alt="评价表单" /></a>
+			<img class="reflect" src="image/评价表单.jpg" />
+		</div>
+		<div class="sscontent">
+			<a href="团队介绍/tuandui.html"><img class="origin" src="image/团队介绍.jpg" alt="团队介绍" /></a>
+			<img class="reflect" src="image/团队介绍.jpg" />
+		</div>
+		
+	</div>
+	
+	<script type="text/javascript">
+		var frame=0;
+		var ss=document.getElementById("scrollshow_container");
+		var ssc=ss.getElementsByTagName("div");
+		var ssclen=ssc.length;
+				
+		var itemSpace=0.6;
+		var showWidth=document.body.clientWidth;
+		
+		var scrollPos=-7;
+		var showScrollPos=-7;
+		var minScrollPos=0;
+		var maxScrollPos=ssclen-1;
+		
+		var mouseX=0;
+		var mouseY=0;
+		
+		var scrollThusholdWidth=250;
+				
+		function setPos(t,pos)
+		{
+			var x=Math.sin(pos*itemSpace);
+			var y=Math.cos(pos*itemSpace);
+			var size=300/(-y+2.0);
+			t.style.width=size+"px";
+			t.style.top=(Math.abs(pos)>4.1?-650:y*110)+"px";
+			t.style.left=(x*530-size/2+showWidth/2)+"px";
+			t.style.opacity=1.0-pos*pos*pos*pos*0.0035;
+			t.style.zIndex=20-Math.round(Math.abs(pos));
+			if(Math.abs(pos)>4.1)
+				t.style.top="return false;";
+			else
+				t.onclick="";
+		}
+				
+		function updateScroll()
+		{
+			if(mouseX<-scrollThusholdWidth)
+				scrollPos-=(mouseX+scrollThusholdWidth)*0.00025;
+			if(mouseX>scrollThusholdWidth)
+				scrollPos-=(mouseX-scrollThusholdWidth)*0.00025;			
+			
+			if(scrollPos<minScrollPos)
+				scrollPos=minScrollPos;
+			if(scrollPos>maxScrollPos)
+				scrollPos=maxScrollPos;
+			
+			showScrollPos+=(scrollPos-showScrollPos)*0.02;
+			
+			for(var i=0;i<ssclen;++i)
+			{
+				setPos(ssc[i],showScrollPos-i);
+			}
+			//document.getElementById("sscontent").style.left=(Math.sin(frame*0.05)*100)+"px";
+			frame++;
+		}
+	
+		window.onload = function()
+		{
+			window.setInterval("updateScroll()",16.66666667);
+		}
+		
+		window.onresize = function(e)
+		{
+			showWidth=document.body.clientWidth;
+		}
+		
+		ss.onmousemove = function(e)
+		{
+			e=(e?e:windows.event);
+			mouseX=e.clientX-showWidth/2;
+			mouseY=e.clientY;
+		}
+		
+	</script>
+	
+	<!--
+		<a href="护甲机制/hujia.html"><img class="sscontent" src="image/护甲机制解析.jpg" alt="护甲机制解析" /></a>
+		<a href="魔抗机制/mokang.html"><img class="sscontent" src="image/魔抗机制.jpg" alt="魔抗机制" /></a>
+		<a href="游戏概率事件/gailv.html"><img class="sscontent" src="image/游戏概率事件.jpg" alt="游戏概率事件" /></a>
+		<a href="英雄攻略/gonglue.html"><img class="sscontent" src="image/英雄介绍.jpg" alt="英雄介绍" /></a>
+		<a href="表单/biaodan.html"><img class="sscontent" src="image/评价表单.jpg" alt="评价表单" /></a>
+		<a href="团队介绍/tuandui.html"><img class="sscontent" src="image/团队介绍.jpg" alt="团队介绍" /></a>
 		<div id="video" class="darkbg">
 			<video width="800" height="450" controls="controls">
 				<source src="video/dota2.mp4" type="video/mp4" />
@@ -38,27 +155,17 @@
 				</object>
 			</video>
 		</div>
-	
-	<div id="navibar_top" class="darkbg marginside">
 		<a href="游戏特色/charactor.html"><img id="navi" src="image/游戏特色功能.png" alt="游戏特色功能" /></a>
 		<a href="护甲机制/hujia.html"><img id="navi" src="image/护甲机制解析.jpg" alt="护甲机制解析" /></a>
 		<a href="魔抗机制/mokang.html"><img id="navi" src="image/魔抗机制.jpg" alt="魔抗机制" /></a>
 		<a href="游戏概率事件/gailv.html"><img id="navi" src="image/游戏概率事件.jpg" alt="游戏概率事件" /></a>
-	</div>
-	<div id="navibar_bottom" class="darkbg marginside">
 		<a href="英雄攻略/gonglue.html"><img id="navi" src="image/英雄介绍.jpg" alt="英雄介绍" /></a>
 		<a href="表单/biaodan.html"><img id="navi" src="image/评价表单.jpg" alt="评价表单" /></a>
 		<a href="团队介绍/tuandui.html"><img id="navi" src="image/团队介绍.jpg" alt="团队介绍" /></a>
-	</div>
+	-->
+	
 	
 </div>
-<div id="footer">
-	<div id="homelinkbox">
-		<a href="index.html">
-			<div id="homelink"></div>
-		</a>
-	</div>
-</div>	
 </body>
 
 </html>
