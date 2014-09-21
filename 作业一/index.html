@@ -89,10 +89,14 @@
 			var y=Math.cos(pos*itemSpace);
 			var size=300/(-y+2.0);
 			t.style.width=size+"px";
-			t.style.top=(y*110)+"px";
+			t.style.top=(Math.abs(pos)>4.1?-650:y*110)+"px";
 			t.style.left=(x*530-size/2+showWidth/2)+"px";
-			t.style.opacity=1.0-pos*pos*0.06
+			t.style.opacity=1.0-pos*pos*pos*pos*0.0035;
 			t.style.zIndex=20-Math.round(Math.abs(pos));
+			if(Math.abs(pos)>4.1)
+				t.style.top="return false;";
+			else
+				t.onclick="";
 		}
 				
 		function updateScroll()
