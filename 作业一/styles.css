@@ -358,14 +358,48 @@ div#no2_image
 div#no2_par
 {
 }
-
+div#cha_text
+{
+	height:2550px;
+	margin:20px;
+}
+div#ch1
+{
+	position: absolute;
+	width: 697px;
+	height: 552px;
+	left: 120px;
+	top: 85px;
+}
+div#ch2
+{
+	position: absolute;
+	left: 121px;
+	top: 703px;
+	width: 697px;
+	height: 552px;
+}
+div#ch3
+{
+	position: absolute;
+	width: 697px;
+	height: 587px;
+	top: 1305px;
+	left=171px;
+	left: 122px;
+}
+div#ch4
+{
+	position: absolute;
+	left: 121px;
+	top: 1950px;
+}
 /*护甲机制*/
 div#hu_text
 {
 	top:10px;
 	
 }
-
 h3.hu
 {
 	font-size:24px;
