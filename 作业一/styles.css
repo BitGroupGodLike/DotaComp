@@ -133,6 +133,7 @@ div#container
 	overflow: hidden;
 	margin-left:auto;
 	margin-right:auto;
+	padding: 20px 0px;
 }
 
 div#footer
@@ -173,20 +174,6 @@ div#title
 div#content
 {
 	overflow: hidden;
-}
-
-div#navibar_top
-{
-	margin: 6px;
-	padding: 20px 10px;
-	text-align: center;
-}
-
-div#navibar_bottom
-{
-	margin: 6px;
-	padding: 20px 10px;
-	text-align: center;
 }
 
 div#homelinkbox
@@ -316,9 +303,8 @@ body#biaodan
 
 div#form
 {
-	overflow: auto;
-	margin: 6px;
-	padding: 80px 160px;
+	margin: 10px 6px;
+	padding: 120px 160px;
 	font-family: Microsoft Yahei;
 	font-size: 25px;
 	text-align: left;
