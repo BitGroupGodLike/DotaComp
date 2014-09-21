@@ -32,7 +32,7 @@
 		<img src="image/title.png" alt="DOTA2科学院" />
 	</div>
 	
-	<div id="scrollshow_container" class="darkbg">
+	<div id="scrollshow_container">
 		<div class="sscontent">
 			<a href="游戏特色/charactor.html"><img class="origin" src="image/游戏特色功能.png" alt="游戏特色功能" /></a>
 			<img class="reflect" src="image/游戏特色功能.png" />
@@ -70,10 +70,49 @@
 		var ssc=ss.getElementsByTagName("div");
 		var ssclen=ssc.length;
 				
+		var itemSpace=0.6;
+		var showWidth=document.body.clientWidth;
+		
+		var scrollPos=-7;
+		var showScrollPos=-7;
+		var minScrollPos=0;
+		var maxScrollPos=ssclen-1;
+		
+		var mouseX=0;
+		var mouseY=0;
+		
+		var scrollThusholdWidth=250;
+				
+		function setPos(t,pos)
+		{
+			var x=Math.sin(pos*itemSpace);
+			var y=Math.cos(pos*itemSpace);
+			var size=300/(-y+2.0);
+			t.style.width=size+"px";
+			t.style.top=(y*110)+"px";
+			t.style.left=(x*530-size/2+showWidth/2)+"px";
+			t.style.opacity=1.0-pos*pos*0.06
+			t.style.zIndex=20-Math.round(Math.abs(pos));
+		}
+				
 		function updateScroll()
 		{
+			if(mouseX<-scrollThusholdWidth)
+				scrollPos-=(mouseX+scrollThusholdWidth)*0.00025;
+			if(mouseX>scrollThusholdWidth)
+				scrollPos-=(mouseX-scrollThusholdWidth)*0.00025;			
+			
+			if(scrollPos<minScrollPos)
+				scrollPos=minScrollPos;
+			if(scrollPos>maxScrollPos)
+				scrollPos=maxScrollPos;
+			
+			showScrollPos+=(scrollPos-showScrollPos)*0.02;
+			
 			for(var i=0;i<ssclen;++i)
-				ssc[i].style.left=(Math.sin(frame*0.05+i)*100)+"px";
+			{
+				setPos(ssc[i],showScrollPos-i);
+			}
 			//document.getElementById("sscontent").style.left=(Math.sin(frame*0.05)*100)+"px";
 			frame++;
 		}
@@ -82,6 +121,19 @@
 		{
 			window.setInterval("updateScroll()",16.66666667);
 		}
+		
+		window.onresize = function(e)
+		{
+			showWidth=document.body.clientWidth;
+		}
+		
+		ss.onmousemove = function(e)
+		{
+			e=(e?e:windows.event);
+			mouseX=e.clientX-showWidth/2;
+			mouseY=e.clientY;
+		}
+		
 	</script>
 	
 	<!--
@@ -110,13 +162,6 @@
 	
 	
 </div>
-<div id="footer">
-	<div id="homelinkbox">
-		<a href="index.html">
-			<div id="homelink"></div>
-		</a>
-	</div>
-</div>	
 </body>
 
 </html>

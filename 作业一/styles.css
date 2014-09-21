@@ -204,13 +204,15 @@ div#homelink
 body#index
 {
 	background-image: url("image/2c.png");
+	height: 100%;
+	overflow: hidden;
 }
 
 div#indexcontainer
 {
 	text-align: center;
 	position: relative;
-	overflow: hidden;
+	margin: 0px;
 }
 
 div#video
@@ -228,7 +230,10 @@ div#indextitle
 
 div#scrollshow_container
 {
-	height: 500px;
+	overflow: visible;
+	min-height: 410px;
+	width: 100%;
+	margin: 0px auto;
 	position: relative;
 	text-align: center;
 }
