@@ -207,7 +207,26 @@ div#header_text span.dropmenu
 div#header_text span.dropmenu div.dropmenu_container
 {
 	position: absolute;
-	width: 60px;
+	width: 80px;
+	left: -8px;
+	z-index: 20;
+	padding-top: 10px;
+	display: none;
+}
+
+div#header_text span.dropmenu div.dropmenu_container div.dropmenu_arrow
+{
+	width: 16px;
+	height: 8px;
+	background-image: url("image/droparrow.png");
+	margin: 0px auto;
+}
+
+div#header_text span.dropmenu div.dropmenu_container div.dropmenu_text
+{
+	padding: 12px;
+	background-color: #222;
+	border-radius: 5px;
 }
 
 div#header_text span.dropmenu:hover div.dropmenu_container,
