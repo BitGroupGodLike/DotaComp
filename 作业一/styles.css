@@ -606,11 +606,17 @@ div.pagepos
 {
 	border-top-style:dashed;
 }
-
-a.page
+div.pages
 {
-	border-style: groove
+	text-align: center;
 }
+
+div.pages a,
+div.pages strong
+{
+	padding: 6px 6px;
+}
+
 /*英雄介绍*/
 
 /*灰烬之灵*/
