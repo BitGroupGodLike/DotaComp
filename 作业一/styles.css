@@ -616,7 +616,7 @@ a.page
 /*灰烬之灵*/
 div#huijin
 {
-	height:3550px;
+	height:3600px;
 	padding:20px;
 	margin:20px;
 }
@@ -631,8 +631,8 @@ div#shuxing1
 	width: 184px;
 	height: 382px;
 	position: absolute;
-	left: 246px;
-	top: 83px;
+	left: 253px;
+	top: 80px;
 }
 div#shuxing2
 {
@@ -652,9 +652,9 @@ div#huijin_2
 div#jineng
 {
 	position: absolute;
-	width: 411px;
+	width: 433px;
 	height: 2962px;
-	left: 49px;
+	left: 27px;
 	top: 730px;
 	padding: 20px;
 }
