@@ -43,17 +43,20 @@ h2, h3
 
 div.darkbg
 {
-	background-color: rgba(0,0,0,0.4)
+	background-color: rgba(0,0,0,0.4);
+	border-radius: 5px;
 }
 
 div.lightbg
 {
-	background-color: rgba(255,255,255,0.4)
+	background-color: rgba(255,255,255,0.4);
+	border-radius: 5px;
 }
 
 div.graybg
 {
-	background-color: rgba(144,144,144,0.4)
+	background-color: rgba(144,144,144,0.4);
+	border-radius: 5px;
 }
 
 div.floatleft
