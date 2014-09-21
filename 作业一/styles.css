@@ -130,7 +130,6 @@ text-decoration:none;
 div#header
 {
 	height: 34px;
-	overflow: hidden;
 	padding-bottom: 6px;
 	background-image: url("image/header.png");
 	background-position: bottom center;
@@ -149,7 +148,6 @@ div#container
 div#footer
 {
 	height: 130px;
-	overflow: hidden;
 	background-image: url("image/footer.png");
 	background-position: top center;
 }
@@ -157,16 +155,25 @@ div#footer
 div#header_content
 {
 	width: 1024px;
-	overflow: hidden;
 	margin-left:auto;
 	margin-right:auto;
 	padding: 6px 0px;
+	position: relative;
 }
 
 div#header_text
 {
 	margin: 0px 10px;
 	padding: 0px;
+}
+
+div.header_selmenu
+{
+	position: absolute;
+	width: 80px;
+	height: 60px;
+	left: 786px;
+	top: 44px;
 }
 
 div#title
@@ -190,6 +197,23 @@ div#text_container
 {
 	padding: 16px;
 	margin: 6px;
+}
+
+div#header_text span.dropmenu
+{
+	position: relative;
+}
+
+div#header_text span.dropmenu div.dropmenu_container
+{
+	position: absolute;
+	width: 60px;
+}
+
+div#header_text span.dropmenu:hover div.dropmenu_container,
+div#header_text span.dropmenu div.dropmenu_container:hover
+{
+	display: block;
 }
 
 div#homelinkbox
@@ -280,6 +304,11 @@ div#slideshow_inner div.sspage
 	width: 720px;
 	margin: 0px 30px;
 	float: left;
+	text-align: center;
+}
+
+div#slideshow_inner div.sspage h2
+{
 	text-align: center;
 }
 
