@@ -25,9 +25,14 @@ div
 
 p
 {
-	margin: 12px 8px;
-	text-indent: 2em;
-	font-family: Tarjan Pro, Microsoft Yahei;
+	font-size:18px;
+	font-family:Microsoft Yahei;
+	color:#FFF;
+	padding:10px;
+	text-align:left;
+ 	text-indent:2em;
+	letter-spacing:1px;
+ 	padding-bottom:10px;
 }
 
 h1

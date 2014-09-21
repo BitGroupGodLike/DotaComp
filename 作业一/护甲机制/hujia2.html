@@ -30,69 +30,69 @@
 		<div id="title">护甲机制解析</div>	
   <div id="hu_text" class="darkbg">
     <h3 class="hu">1.4Dota2护甲机制的测试</h3>
-    <p class="cha">
+    <p>
     由于资料来源于官方论坛，在这不过多赘述，为大家总结一下测试情况。
     </p>
-    <p class="cha">
+    <p>
     测试目的：验证护甲对物理伤害的抗性(或加深)的机制，验证物理伤害抗性公式的正确性；
     </p>
-    <p class="cha">
+    <p>
     测试英雄: 圣堂刺客(本网站英雄介绍有所讲解)和末日使者。圣堂刺客的隐匿技能提供稳定的伤害和减甲。
     </p>
-    <p class="cha">
+    <p>
     测试过程：圣堂刺客用2级隐匿（附加100点物理伤害并且伤害前减4点护甲）分别攻击12点护甲的末日1和1点护甲的末日2。
     </p>
-    <p class="cha">
+    <p>
     末日1：按照公式计算12点护甲，物理伤害抗性=12*6%/(1+12*6%)≈41.86%，但被减少4点护甲后，物理伤害抗性=18*6%/(1+8*6%)≈32.43%。
     </p>
-    <p class="cha">
+    <p>
     末日2：按照公式计算，1点护甲物理伤害抗性=6%/(1+6%)≈5.66%，但被减少4点护甲后，-3点护甲物理伤害抗性=-3*6%/(1-(-3)*6%)≈-15.25%，相当于伤害加深15.25%。
     </p>
     <div id="ceshi1">
     <img src="hujiaceshi1.jpg" width="580" height="87"  alt=""/> </div>
-    <p class="cha">
+    <p>
     	预期结果：上表中红底数据应是预期结果。
     </p>
-    <p class="cha">
+    <p>
    		测试结果：
     </p>
-    <p class="cha">
+    <p>
      末日1被攻击前
     </p>
      <div id="ceshi1">
      <img src="hujiaceshi2.jpg" width="580" height="311"  alt=""/> 
      </div>
-    <p class="cha">
+    <p>
     	 末日1结果
     </p>
     <div id="ceshi1">
     <img src="hujiaceshi3.jpg" width="397" height="76"  alt=""/>
     </div>
-    <p class="cha">
+    <p>
     	 末日2被攻击前
     </p>
     <div id="ceshi1">
     <img src="hujiaceshi4.jpg" width="580" height="303"  alt=""/>
     </div>
-    <p class="cha">
+    <p>
     	 末日2结果
     </p>
     <div id="ceshi1">
     <img src="hujiaceshi5.jpg" width="394" height="75"  alt=""/> 
     </div>
-    <p class="cha">
+    <p>
     	 结论：
     </p>
-    <p class="cha">
+    <p>
     	 理论预期中，8点护甲在遭受100物理伤害的攻击后，实际损失生命67.57；
     </p>
-    <p class="cha">
+    <p>
     理论预期中，-3点护甲在遭受100物理伤害的攻击后，实际损失生命115.25；
     </p>
-    <p class="cha">
+    <p>
     测试结果分别是67和114，误差在1%以内，造成误差的原因有，第一，末日初始护甲的不确定性(虽然很近似)；第二，测试伤害结果没有小数，小数位被处理。
     </p>
-    <p class="cha">
+    <p>
     结论，在可接受的误差范围内，物理伤害抗性公式正确无误，包括正护甲和负护甲。
     </p>
     <div class="artpages">
