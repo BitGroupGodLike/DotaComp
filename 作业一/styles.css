@@ -378,16 +378,13 @@ div#scrollshow_container
 	text-align: center;
 }
 
-div#scrollshow_container div.scrollshow_content
-{
-}
-
-.sscontent
+div#scrollshow_container div.sscontent
 {
 	position: absolute;
 	opacity: 1.0;
 	border: 0;
 	width: 213px;
+	display: none;
 }
 
 div#scrollshow_container img.origin
