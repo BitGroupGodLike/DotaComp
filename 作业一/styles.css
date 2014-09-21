@@ -324,7 +324,7 @@ div#no1_par
 h2.cha{
 	font-size:30px;
 	font-family:Microsoft Yahei;
-	left:3cm;
+	padding-left:10px;
 	color:#FFF;
 }
 body#child
@@ -336,7 +336,11 @@ p.cha{
 	font-size:18px;
 	font-family:Microsoft Yahei;
 	color:#FFF;
-	padding:20px;
+	padding:10px;
+	text-align:left;
+ 	text-indent:2em;
+	letter-spacing:1px;
+ 	padding-bottom:10px;
 }
 
 div#no2_text
@@ -366,27 +370,51 @@ h3.hu
 {
 	font-size:24px;
 	font-family:Microsoft Yahei;
-	left:3cm;
+	padding-left:20px;
 	color:#FFF;
 }
 div#table
 {
 	position: absolute;
-	left: 440px;
-	top: 134px;
+	left: 452px;
+	top: 118px;
 	width: 200px;
 	height: 331px;
 }
 div#table1{
 	position: absolute;
-	left: 492px;
-	top: 579px;
-	width: 528px;
+	left: 62px;
+	top: 606px;
+	width: 891px;
+	height: 277px;
 }
 div#return2{
 	position: absolute;
 	left: 876px;
 	top: 110px;
+}
+div#fuhujia
+{
+	position: absolute;
+	left: 183px;
+	top: 395px;
+}
+div#ceshi1
+{
+	text-align: center;
+}
+div.artpages
+{
+	text-align:center;
+}
+div.pagepos
+{
+	border-top-style:dashed;
+}
+
+a.page
+{
+	border-style: groove
 }
 /*英雄介绍*/
 div#huijin

@@ -1,205 +1,225 @@
-<!doctype html>
-<html>
-<head>
-	<link rel="stylesheet" type="text/css" href="../styles.css" />
-	<meta charset="utf-8">
-	<title>护甲机制解析</title>
-</head>
-
-<body id="child">
-<div id="header">
-	<div id="header_content">
-		<div id="header_text" class="floatleft">
-			DOTA2科学院
-		</div>
-		<div id="header_text" class="floatleft">
-			您现在的位置：<a href="../index.html">首页</a> > 护甲机制
-		</div>
-		<div id="header_text" class="floatright">
-			<a href="../游戏特色/charactor.html">游戏特色</a> | 
-			<a href="../护甲机制/hujia.html">护甲机制</a>  | 
-			<a href="../魔抗机制/mokang.html">魔抗机制</a>  | 
-			<a href="../游戏概率事件/gailv.html">概率事件</a>  | 
-			<a href="../英雄攻略/gonglue.html">英雄攻略</a>  | 
-			<a href="../表单/biaodan.html">评价表单</a>  | 
-			<a href="../团队介绍/tuandui.html">团队介绍</a> 
-		</div>
-	</div>
-</div>
-<div id="container">	
-		<div id="title">护甲机制解析</div>	
-  <div id="hu_text" class="darkbg">
-    	<h2 class="cha">一、dota2护甲机制的真面目</h2>
-    	<h3 class="hu">1.1dota2护甲计算公式</h3>
-   	<p class="cha">
-   	 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;公式：护甲值*6%/(1+护甲值*6%) <br><br><br><br><br><br><br><br><br><br><br>
-   		</p>
-    	<h3 class="hu">1.2如何理解护甲公式</h3>
-   	<p class="cha">
-    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        从该公式中我们可以知道一点，Dota创世者(或者追溯到War创世者)已经定义了，每点护甲提供的格挡物理伤害百分比是等效的，这句话与“每点护甲提供的有效物理生命值是完全相同的”的意思完全相同！而且这个这个百分比是每点护甲6%！
-   	  </p>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br>
-      <p class="cha">
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上表已经诠释了Dota的护甲机制，公式只是结果，意味着任意一点护甲提供的有效物理生命值都是等效的。换句话说，0点护甲提升1点护甲，和100点护甲再提升1点护甲，2种情况中新增的1点护甲的效果是完全相等的！
-      </p>
-   	  <div id="table1">
-   		  <table width="527" height="231" border="1" cellpadding="2cm">
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-</table>
-
-   	  </div>
-   	  <div id="table">
-       		  <table width="200" border="1" cellpadding="2cm">
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-</table>
-
+    <!doctype html>
+    <html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../styles.css" />
+        <meta charset="utf-8">
+        <title>护甲机制解析</title>
+    </head>
+    
+    <body id="child">
+    <div id="header">
+        <div id="header_content">
+            <div id="header_text" class="floatleft">
+                DOTA2科学院
+            </div>
+            <div id="header_text" class="floatleft">
+                您现在的位置：<a href="../index.html">首页</a> > 护甲机制
+            </div>
+            <div id="header_text" class="floatright">
+                <a href="../游戏特色/charactor.html">游戏特色</a> | 
+                <a href="../护甲机制/hujia.html">护甲机制</a>  | 
+                <a href="../魔抗机制/mokang.html">魔抗机制</a>  | 
+                <a href="../游戏概率事件/gailv.html">概率事件</a>  | 
+                <a href="../英雄攻略/gonglue.html">英雄攻略</a>  | 
+                <a href="../表单/biaodan.html">评价表单</a>  | 
+                <a href="../团队介绍/tuandui.html">团队介绍</a> 
+            </div>
         </div>
-	</div>
-</div>
-<div id="footer">
-	<div id="homelinkbox">
-		<a href="../index.html">
-			<div id="homelink"></div>
-		</a>
-	</div>
-</div>	
-</body>
-</html>
+    </div>
+    <div id="container" style="line-height:30px">	
+            <div id="title">护甲机制解析</div>	
+      <div id="hu_text" class="darkbg">
+            <h2 class="cha">一、dota2护甲机制的真面目</h2>
+            <h3 class="hu">1.1dota2护甲计算公式</h3>
+        <p class="cha">
+            公式：护甲值*6%/(1+护甲值*6%) <br><br><br><br><br><br><br><br><br><br><br>
+            </p>
+            <h3 class="hu">1.2如何理解护甲公式</h3>
+        <p class="cha">
+            从该公式中我们可以知道一点，Dota创世者(或者追溯到War创世者)已经定义了，每点护甲提供的格挡物理伤害百分比是等效的，这句话与“每点护甲提供的有效物理生命值是完全相同的”的意思完全相同！而且这个这个百分比是每点护甲6%！
+        </p>
+        <div style="padding-left:2cm">
+              <table width="886" height="248" border="1" cellpadding="2cm">
+      <tr>
+        <td width="49" height="39">护甲与生命</td>
+        <td width="40">生命值</td>
+        <td width="26">护甲</td>
+        <td width="99">每点护甲提供的有效物理生命百分比</td>
+        <td width="86">每点护甲提供的有效物理生命值</td>
+        <td width="75">有效总生命值</td>
+        <td width="35">攻击力</td>
+        <td width="86">致死次数</td>
+        <td width="96">实际每次伤害</td>
+        <td width="111">实际每次减少伤害</td>
+        <td width="91">减伤百分比</td>
+      </tr>
+      <tr>
+        <td>变量名</td>
+        <td>S</td>
+        <td>H</td>
+        <td>b</td>
+        <td>A</td>
+        <td>Y</td>
+        <td>G</td>
+        <td>Z</td>
+        <td>g</td>
+        <td>J</td>
+        <td>B</td>
+      </tr>
+      <tr>
+        <td>公式</td>
+        <td>S</td>
+        <td>H</td>
+        <td>b</td>
+        <td>b*S</td>
+        <td>S+S*b*H</td>
+        <td>G</td>
+        <td>Y/G</td>
+        <td>S/Z</td>
+        <td>G-g</td>
+        <td>J/G</td>
+      </tr>
+      <tr>
+        <td>化简</td>
+        <td>S</td>
+        <td>H</td>
+        <td>b</td>
+        <td>b*S</td>
+        <td>S*(1+b*H)</td>
+        <td>G</td>
+        <td>S*(1+b*H)/G</td>
+        <td>G/(1+b*H)</td>
+        <td>G*b*h/(1+b*H)</td>
+        <td>b*H/(1+b*H)</td>
+      </tr>
+      <tr>
+        <td>举例1</td>
+        <td>10000</td>
+        <td>1</td>
+        <td>6%</td>
+        <td>60</td>
+        <td>10600</td>
+        <td>100</td>
+        <td>106</td>
+        <td>94.34</td>
+        <td>5.66</td>
+        <td>5.66%</td>
+      </tr>
+      <tr>
+        <td>举例2</td>
+        <td>10000</td>
+        <td>10</td>
+        <td>6%</td>
+        <td>60</td>
+        <td>16000</td>
+        <td>99</td>
+        <td>161.62</td>
+        <td>61.88</td>
+        <td>37.13</td>
+        <td>37.50%</td>
+      </tr>
+      <tr>
+        <td height="40">举例3</td>
+        <td>10000</td>
+        <td>25</td>
+        <td>6%</td>
+        <td>60</td>
+        <td>25000</td>
+        <td>100</td>
+        <td>250</td>
+        <td>40.00</td>
+        <td>60.00</td>
+        <td>60.00%</td>
+      </tr>
+    </table>
+    
+          </div>
+          <div id="table">
+                  <table width="200" border="1" cellpadding="2cm">
+      <tr>
+        <td width="53">护甲</td>
+        <td width="127">减伤比例</td>
+      </tr>
+      <tr>
+        <td>0</td>
+        <td>0.00%</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>5.66%</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>10.71%</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>15.25%</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>19.35%</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>23.08%</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>26.47%</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>29.58%</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>32.43%</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>35.06%</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>37.50%</td>
+      </tr>
+    </table>
+    
+            </div>
+             <br>
+          <p class="cha">
+         上表已经诠释了Dota的护甲机制，公式只是结果，意味着任意一点护甲提供的有效物理生命值都是等效的。换句话说，0点护甲提升1点护甲，和100点护甲再提升1点护甲，2种情况中新增的1点护甲的效果是完全相等的！
+          </p>
+          <div class="artpages">
+        	<div class="pagepos"> 
+            	<div class="pages">
+                	<div>
+                    <strong style="border-style:groove">1</strong>
+                    <a class="page" href="hujia1.html">2</a>
+                    <a class="page" href="hujia2.html">3</a>
+                    <a class="page" href="hujia3.html">4</a>
+                     <a class="page" href="hujia4.html">5</a>
+                    <a class="page" href="hujia5.html">6</a>
+                    <a class="page" href="hujia6.html">7</a>
+                    <a class="page" href="hujia7.html">8</a>
+                    <a class="page" href="hujia1.html">下一页</a>
+                    <a class="page" href="hujia8.html">... 9</a>
+                   </div>
+            	</div>
+         	</div>
+       </div>
+        
+        </div>
+    </div>
+         
+         
+    <div id="footer">
+        <div id="homelinkbox">
+            <a href="../index.html">
+                <div id="homelink"></div>
+            </a>
+        </div>
+    </div>	
+    </body>
+    </html>
