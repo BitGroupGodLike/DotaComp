@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../styles.css" />
+	<meta charset="utf-8" />
+	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+	<title>魔抗机制</title>
+</head>
+
+<body id="child">
+<div id="header">
+	<div id="header_content">
+		<div id="header_text" class="floatleft">
+			DOTA2科学院
+		</div>
+		<div id="header_text" class="floatleft">
+			您现在的位置：<a href="../index.html">首页</a> > 魔抗机制
+		</div>
+		<div id="header_text" class="floatright">
+			<a href="../游戏特色/charactor.html">游戏特色</a> | 
+			<a href="../护甲机制/hujia.html">护甲机制</a>  | 
+			<span class="currentpos"><div id="currentpos_mark"></div>魔抗机制</span>   | 
+			<a href="../游戏概率事件/gailv.html">概率事件</a>  | 
+			<span class="dropmenu">
+			<a href="../英雄攻略/gonglue.html">英雄攻略</a>
+			<div class="dropmenu_container">
+				<div class="dropmenu_arrow"></div>
+				<div class="dropmenu_text">
+					<div><a href="../英雄攻略/huijin.html">灰烬之灵</a></div>
+					<div><a href="../英雄攻略/shengtang.html">圣堂刺客</a></div>
+				</div>
+			</div>
+			</span>  | 
+			<a href="../表单/biaodan.html">评价表单</a>  | 
+			<a href="../团队介绍/tuandui.html">团队介绍</a> 
+		</div>
+	</div>
+</div>
+<div id="container">
+	<div id="title" class="darkbg">魔抗机制</div>
+	<div id="content">
+		<div id="text_container" class="darkbg">
+			<h2>五、实测哈斯卡技能结算方式</h2>
+			<p> 
+			【实测步骤】
+		  </p>
+          	
+			<p> 
+			1、创建两名角色：7级裸体满状态血量815,满级狂战士之血的哈斯卡；1级死亡一指伤害600的莱恩；
+		  </p>
+			<p> 
+			2、观察哈斯卡初始状态魔法抗性；
+			</p>
+			<p> 
+			3、1级死亡一指打在初始状态的哈斯卡身上，观察哈斯卡实际伤害情况；
+			</p>
+            <p>
+           4、-wtf，莱恩在1秒内连续对初始状态的哈斯卡施放2次死亡一指，观察实际伤害情况。
+            </p>
+            <p>
+           5、Lina火女蓝杖3级大招伤害1250，能否直接打死满状态7级落体815血量的哈斯卡；
+            </p>
+            <p>
+            【实验结果】
+            </p>
+            <p>
+            1、哈斯卡初始状态魔抗为30.25%，游戏面板显示为30%；
+            </p>
+            <div class="center">
+   	   	    <img src="../image/ceshi1.jpg" width="580" height="213"  alt=""/>
+            </div>
+            <p>
+            2、1级死亡一指魔法伤害600，打在初始状态的哈斯卡身上，实际伤害418，伤害比,69.67%。
+若按理论计算，魔抗30.25%，600魔法伤害的实际伤害比例=1-30.25%=69.75%；实际伤害=418.5。因为游戏血量扣除采用取整机制，所以实际符合理论！如图：
+            </p>
+            <div class="center">
+            <img src="../image/ceshi2.jpg" width="580" height="471"  alt=""/>
+            </div>
+            <div class="center">
+       	    <img src="../image/ceshi3.jpg" width="384" height="97"  alt=""/> 
+            </div>
+            <p>
+           3、莱恩在1秒内连续对初始状态的哈斯卡施放2次死亡一指：第一次伤害418，第二次伤害229。
+            </p>
+            
+          <p>
+           结果分析：
+          </p>
+          <p>
+            初始状态血量815，魔抗30.25%，第一次伤害418，剩余血量397；
+          </p>
+            <p>
+            之后状态血量397，当前血量48.71%，7层血，魔抗61.75，第二次伤害=600*(1-61.75%)=229.5，取整229。
+            </p>
+            <p>
+            实际与实际相符，结论得到证实。如图：
+            </p>
+            <div class="center">
+            <img src="../image/ceshi4.jpg" width="392" height="156"  alt=""/> 
+            </div>
+            <p>
+            4、结果哈斯卡被秒了。Lina火女蓝杖3级大招伤害1250，打死815满状态的哈斯卡。按照理论计算，815血量满状态4级被动的哈斯卡，秒杀需要伤害=815/(1-30.25%)=1168.46,取整1169，1250大于1169，所以哈斯卡阵亡。实际伤害=1250*(1-30.25%)=871.825取整871；图：
+            </p>
+            <div class="center">
+       	    <img src="../image/ceshi5.jpg" width="580" height="288"  alt=""/>
+            </div>
+             <div class="center">
+       	     <img src="../image/ceshi6.jpg" width="376" height="113"  alt=""/> 
+             </div>
+             <p>
+             【实验结论】
+             </p>
+             <p>
+             1、哈斯卡狂战士之血的层数是以当前血量比例来计算的，魔抗也是以当前狂战士之血层数来计算的，而非动态分阶计算。每收到一次魔法伤害，结算完伤害之后，再重新按照血量计算狂战士之血和魔抗。
+             </p>
+             <p>
+             2、血量高的时候魔抗并不高，可以通过瞬间高爆发的魔法伤害给予巨大伤害。比如火女、莱恩、红杖等，天怒大招（2秒内20次伤害）等分段魔法不适用，因为每段伤害过后会重新计算狂战士之血的层数。
+             </p>
+            <div class="artpages">
+				<div class="pagepos"> 
+					<div class="pages">
+                    <a href="mokang1.html">1...</a>
+                    <a href="mokang3.html">上一页</a>
+					<a href="mokang2.html">2</a>
+                    <a href="mokang3.html">3</a>
+					<strong>4</strong>
+					</div>
+				</div>
+			</div>
+	  </div>
+    </div>
+</div>
+
+
+
+<div id="footer">
+	<div id="homelinkbox">
+		<a href="../index.html">
+			<div id="homelink"></div>
+		</a>
+  </div>
+</div>	
+</body>
+</html>
