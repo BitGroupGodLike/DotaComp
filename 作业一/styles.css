@@ -143,10 +143,12 @@ text-decoration:none;
 
 div.artpages
 {
+	margin-top: 16px;
 	text-align:center;
 }
 div.pagepos
 {
+	padding: 6px 0px;
 	border-top-style:dashed;
 }
 div.pages
@@ -393,7 +395,7 @@ div#slideshow_inner div.sspage p
 
 body#index
 {
-	background-image: url("image/2c.png");
+	background-image: url("image/2c.jpg");
 	height: 100%;
 	overflow: hidden;
 }
@@ -469,7 +471,7 @@ div#scrollshow_container img.reflect
 
 body#tuandui
 {
-	background-image: url("image/2c.png");
+	background-image: url("image/2c.jpg");
 }
 
 div#show
@@ -498,7 +500,7 @@ div#showimage
 
 body#biaodan
 {
-	background-image: url("image/2c.png");
+	background-image: url("image/2c.jpg");
 }
 
 div#form
@@ -537,7 +539,7 @@ div#form textarea
 
 body#character
 {
-	background-image: url("image/2c.png");
+	background-image: url("image/2c.jpg");
 }
 
 div#content.character_fixheight
@@ -545,82 +547,13 @@ div#content.character_fixheight
 	height: 1200px;
 }
 
-div#no1_image
-{
-	width: 453px;
-	height: 302px;
-	padding: 15px;
-}
-
-div#no1_text
-{
-	position: absolute;
-	left: 70px;
-	top: 79px;
-	width: 650px;
-	height: 634px;
-}
-div#no1_par
-{
-	width: 626px;
-	height: 142px;
-}
-h2.cha{
-	font-size:30px;
-	font-family:Microsoft Yahei;
-	padding-left:10px;
-	color:#FFF;
-}
 body#child
 {
-	background-image: url("image/2c.png");
-}
-
-p.cha{
-	font-size:18px;
-	font-family:Microsoft Yahei;
-	color:#FFF;
-	padding:10px;
-	text-align:left;
- 	text-indent:2em;
-	letter-spacing:1px;
- 	padding-bottom:10px;
-}
-
-div#no2_text
-{
-	position: absolute;
-	left: 812px;
-	top: 337px;
-	width: 650px;
-	height: 749px;
-}
-div#no2_image
-{
-	padding:30px
-}
-div#no2_par
-{
-}
-div#cha_text
-{
-	height:2550px;
-	margin:20px;
+	background-image: url("image/2c.jpg");
 }
 
 /*护甲机制*/
-div#hu_text
-{
-	top:10px;
-	
-}
-h3.hu
-{
-	font-size:24px;
-	font-family:Microsoft Yahei;
-	padding-left:20px;
-	color:#FFF;
-}
+
 div#table
 {
 	position: absolute;
@@ -629,24 +562,23 @@ div#table
 	width: 200px;
 	height: 331px;
 }
-div#table1{
+
+div#table1
+{
 	position: absolute;
 	left: 62px;
 	top: 606px;
 	width: 891px;
 	height: 277px;
 }
-div#return2{
-	position: absolute;
-	left: 876px;
-	top: 110px;
-}
+
 div#fuhujia
 {
 	position: absolute;
 	left: 183px;
 	top: 395px;
 }
+
 div#ceshi1
 {
 	text-align: center;
@@ -687,48 +619,14 @@ div.selection_text
 }
 
 /*灰烬之灵*/
+
 div#huijin
 {
 	padding:20px;
 	margin:20px;
 }
-div#huijin_1
-{
-	position: relative;
-}
-div#shuxing1
-{
-	padding: 20px;
-}
-div#shuxing2
-{
-	padding: 20px;
-}
-div#huijin_2
-{
-	padding: 20px;
-}
-div#jineng
-{
-	padding: 20px;
-}
-div#dingwei
-{
-	padding: 20px;
-}
-div#tuijian
-{
-	padding: 20px;
-}
-div#tieshi
-{
-	padding: 20px;
-}
+
 /*魔抗机制*/
-div#mo_text
-{
-	top:10px;
-}
 
 div#mo_image1
 {
@@ -736,17 +634,12 @@ div#mo_image1
 	left: 278px;
 	top: 317px;
 }
-div#return3
-{
-	position: absolute;
-	left: 1147px;
-	top: 240px;
-}
+
 /*游戏概率*/
 
 body#gailv
 {
-	background-image: url("image/2c.png");
+	background-image: url("image/2c.jpg");
 }
 
 div#randcontent
@@ -763,11 +656,4 @@ div#randtext
 div#randimage
 {
 	margin: 6px;
-}
-
-div#return4
-{
-	position: absolute;
-	left: 889px;
-	top: 102px;
 }
