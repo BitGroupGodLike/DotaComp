@@ -95,6 +95,12 @@ div.marginedge
 	margin: 6px;
 }
 
+div.centerpos
+{
+	margin-left: auto;
+	margin-right: auto;
+}
+
 div.center
 {
 	text-align: center;
