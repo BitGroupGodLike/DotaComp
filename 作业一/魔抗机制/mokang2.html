@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../styles.css" />
+	<meta charset="utf-8" />
+	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+	<title>魔抗机制</title>
+</head>
+
+<body id="child">
+<div id="header">
+	<div id="header_content">
+		<div id="header_text" class="floatleft">
+			DOTA2科学院
+		</div>
+		<div id="header_text" class="floatleft">
+			您现在的位置：<a href="../index.html">首页</a> > 魔抗机制
+		</div>
+		<div id="header_text" class="floatright">
+			<a href="../游戏特色/charactor.html">游戏特色</a> | 
+			<a href="../护甲机制/hujia.html">护甲机制</a>  | 
+			<span class="currentpos"><div id="currentpos_mark"></div>魔抗机制</span>   | 
+			<a href="../游戏概率事件/gailv.html">概率事件</a>  | 
+			<span class="dropmenu">
+			<a href="../英雄攻略/gonglue.html">英雄攻略</a>
+			<div class="dropmenu_container">
+				<div class="dropmenu_arrow"></div>
+				<div class="dropmenu_text">
+					<div><a href="../英雄攻略/huijin.html">灰烬之灵</a></div>
+					<div><a href="../英雄攻略/shengtang.html">圣堂刺客</a></div>
+				</div>
+			</div>
+			</span>  | 
+			<a href="../表单/biaodan.html">评价表单</a>  | 
+			<a href="../团队介绍/tuandui.html">团队介绍</a> 
+		</div>
+	</div>
+</div>
+<div id="container">
+	<div id="title" class="darkbg">魔抗机制</div>
+	<div id="content">
+		<div id="text_container" class="darkbg">
+			<h2>三、哈斯卡魔抗的结算机制</h2>
+			<p> 
+			经常听到刀友们这样的言论：
+“98.50%的魔法抗性，近乎于魔免，哈斯卡魔法打不死。”
+“哈斯卡剩下xx血，某技能肯定打不死我 。”
+		  </p>
+			<p> 
+			先不论这些说法正确与否，我们先讨论一下*朝的个人所得税的计算方式，
+最新规定个人所得税免征额3500元，超过3500的部分按下表计算：
+		  </p>
+            <div class="center">
+       	    <img src="../image/mokang5.jpg" width="380" height="238"  alt=""/>
+             </div>
+			<p> 
+			那么假设，我月收入10w，税率是不是45%？很明显*朝黑到收4w5的税，那还不反了？这是阶梯计算，不同的部分税率不同，10w具体纳税多少，中学时我们肯定做过这样的题目，这里我就不算了。
+			</p>
+			<p> 
+			问题是，哈斯卡的狂战士之血技能会如同*朝个税的计算方式一样，动态的判定当前血量，从而实时计算每一个状态的魔抗吗？
+			</p>
+            <p>
+            答案是，不。哈斯卡狂战士之血的魔抗是以当前血量来计算的，并非动态计算每一点伤害后的剩余血量比例。比如，满血的哈斯卡魔抗30.25%，那么7级裸体815血量的哈斯卡，魔法有效生命值为815/(1-30.25%)=1168.4588。意味着，如果有一个魔法技能有1169以上的伤害，是可以直接秒掉815血量的哈斯卡！！虽然1169伤害的魔法技能并不存在，但是减魔抗后蓝杖莱恩火女还是可以实现的。收到第一次伤害后，才开始计算当前的狂战士之血的层数。
+            </p>
+            <p>
+            结论:对于每一次魔法伤害，哈斯卡狂战士之血增加的魔抗，是以当前血量来计算的，而非动态分阶计算。
+            </p>
+           
+            <div class="artpages">
+				<div class="pagepos"> 
+					<div class="pages">
+                    <a href="mokang1.html">1...</a>
+                    <a href="mokang1.html">上一页</a>
+					<strong>2</strong>
+					<a href="mokang2.html">2</a>
+					<a href="hujia2.html">3</a>
+					<a href="mokang2.html">下一页</a>
+					<a href="hujia8.html">... 4</a>
+					</div>
+				</div>
+			</div>
+	  </div>
+    </div>
+</div>
+<div id="footer">
+	<div id="homelinkbox">
+		<a href="../index.html">
+			<div id="homelink"></div>
+		</a>
+	</div>
+</div>	
+</body>
+</html>

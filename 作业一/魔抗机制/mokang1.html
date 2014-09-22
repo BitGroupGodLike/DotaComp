@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../styles.css" />
+	<meta charset="utf-8" />
+	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+	<title>魔抗机制</title>
+</head>
+
+<body id="child">
+<div id="header">
+	<div id="header_content">
+		<div id="header_text" class="floatleft">
+			DOTA2科学院
+		</div>
+		<div id="header_text" class="floatleft">
+			您现在的位置：<a href="../index.html">首页</a> > 魔抗机制
+		</div>
+		<div id="header_text" class="floatright">
+			<a href="../游戏特色/charactor.html">游戏特色</a> | 
+			<a href="../护甲机制/hujia.html">护甲机制</a>  | 
+			<span class="currentpos"><div id="currentpos_mark"></div>魔抗机制</span>   | 
+			<a href="../游戏概率事件/gailv.html">概率事件</a>  | 
+			<span class="dropmenu">
+			<a href="../英雄攻略/gonglue.html">英雄攻略</a>
+			<div class="dropmenu_container">
+				<div class="dropmenu_arrow"></div>
+				<div class="dropmenu_text">
+					<div><a href="../英雄攻略/huijin.html">灰烬之灵</a></div>
+					<div><a href="../英雄攻略/shengtang.html">圣堂刺客</a></div>
+				</div>
+			</div>
+			</span>  | 
+			<a href="../表单/biaodan.html">评价表单</a>  | 
+			<a href="../团队介绍/tuandui.html">团队介绍</a> 
+		</div>
+	</div>
+</div>
+<div id="container">
+	<div id="title" class="darkbg">魔抗机制</div>
+	<div id="content">
+		<div id="text_container" class="darkbg">
+			<h2>一、刀塔魔抗机制简介</h2>
+			<p> 
+			技能绚烂的刀塔世界中，魔抗也是很重要的一部分，首先我们要搞清楚魔抗是如何计算的。
+			</p>
+			<p> 
+			魔抗遵循的规则是非线性叠加，游戏中只有增加魔法抗性百分比的装备及技能，因此来源不同的魔法抗性遵循以下叠加规则
+			</p>
+			<p> 
+			假设英雄获得若干个魔法抗性x1、x2、x3...xn；则英雄总魔抗=1-(1-x1)*(1-x2)*(1-x3)*...*(1-xn)。
+			</p>
+			<p> 
+			例如：敌法师4级被动50%+挑战30%+拉比克4级被动光环20%+基础魔抗25%，则总魔抗=1-(1-25%)*(1-50%)*(1-30%)*(1-20%)=79%
+			</p>
+			<div class="center">
+			<img src="../image/魔抗.jpg" width="580" height="349"  alt=""/> 
+			</div>
+            <h2>二、哈斯卡狂战士之血机制（魔抗部分）</h2>
+            <p>
+            注意：我们现在只讨论本技能的魔抗部分，而且大部分情况是讨论满级的情况。技能描述大家可以直接从游戏界面看，我相信大家能看懂每一个字，但是组合起来是什么意思，还得琢磨一番。
+            </p>
+            <p>
+            从描述来看，狂战士之血的效果是分层的，最多14层。而满血的哈斯卡是拥有1层狂战士之血效果的，这点可以留意一下状态栏。
+            </p>
+            <p>
+            一层的效果增加了7%的魔抗，通过第一章公式计算，一层的总魔抗=1-(1-25%)*(1-7%)=30.25%，游戏界面显示为30%。
+            </p>
+            <div>
+            <img src="../image/mokang3.jpg" width="580" height="213"  alt=""/> 
+            </div>
+            <p>
+            但是技能说明并不明确，“哈斯卡的伤痛赐予他力量，根据他损失的生命值将获得攻击速度和魔法抗性加成”.
+            </p>
+          <p>
+            到底是损失多少生命值能多获得一层狂战士之血呢？
+          </p>
+          <p>
+            经过游戏中的测试，7级裸装哈斯卡，满级被动，总血量815。
+          </p>
+            <p>
+            当血量为709以上时，1层狂战士之血，临界值87%，附加魔抗7%，总魔抗30.25%；
+            </p>
+            <p>
+            当血量为653以上，709以下时，2层，临界值80%，附加魔抗14%，总魔抗35.50%
+            </p>
+            <p>
+            当血量为595以上，653以下时，3层；临界值73%，附加魔抗21%，总魔抗40.75%
+            </p>
+            <p>
+            以此类推，当血量小于等于3%时，14层狂战士之血，附加魔抗98%，总魔抗98.50%；刚好符合描述的14层血。
+            </p>
+            <p>
+            下图，哈斯卡狂战士之血魔抗表
+            </p>
+            <div class="center">
+            <img src="../image/mokang4.jpg" width="444" height="305"  alt=""/> 
+            </div>
+            <p>
+            上图直观得表述了哈斯卡狂战士之血机制：
+13%的伤害以内，触发1层狂战士之血；之后每7%的伤害多触发一层血；最多14层。
+			</p>
+            <div class="artpages">
+				<div class="pagepos"> 
+					<div class="pages">
+					<strong>1</strong>
+					<a href="mokang2.html">2</a>
+					<a href="hujia2.html">3</a>
+					<a href="mokang2.html">下一页</a>
+					<a href="hujia8.html">... 4</a>
+					</div>
+				</div>
+			</div>
+	  </div>
+    </div>
+</div>
+<div id="footer">
+	<div id="homelinkbox">
+		<a href="../index.html">
+			<div id="homelink"></div>
+		</a>
+	</div>
+</div>	
+</body>
+</html>
