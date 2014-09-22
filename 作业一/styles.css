@@ -240,6 +240,22 @@ div#header_text span.dropmenu div.dropmenu_container:hover
 	display: block;
 }
 
+div#header_text span.currentpos
+{
+	position: relative;
+	font-weight: bold;
+}
+
+div#currentpos_mark
+{
+	position: absolute;
+	background-color: #DDD;
+	width: 76px;
+	height: 6px;
+	left: -6px;
+	top: 28px;
+}
+
 div#homelinkbox
 {
 	width: 646px;
