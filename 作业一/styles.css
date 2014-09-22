@@ -95,6 +95,11 @@ div.marginedge
 	margin: 6px;
 }
 
+div.center
+{
+	text-align: center;
+}
+
 p.indent
 {
 	text-indent: 2em;
@@ -128,6 +133,26 @@ form a:hover
 { 
 color:#FFF; 
 text-decoration:none; 
+}
+
+div.artpages
+{
+	text-align:center;
+}
+div.pagepos
+{
+	border-top-style:dashed;
+}
+div.pages
+{
+	text-align: center;
+}
+
+div.pages a,
+div.pages b,
+div.pages strong
+{
+	padding: 6px 6px;
 }
 
 /* 公共部分 */
@@ -214,8 +239,9 @@ div#header_text span.dropmenu div.dropmenu_container
 	position: absolute;
 	width: 88px;
 	left: -12px;
+	top: 20px;
 	z-index: 20;
-	padding-top: 10px;
+	padding-top: 12px;
 	display: none;
 }
 
@@ -619,26 +645,40 @@ div#ceshi1
 {
 	text-align: center;
 }
-div.artpages
-{
-	text-align:center;
-}
-div.pagepos
-{
-	border-top-style:dashed;
-}
-div.pages
-{
-	text-align: center;
-}
-
-div.pages a,
-div.pages strong
-{
-	padding: 6px 6px;
-}
 
 /*英雄介绍*/
+
+div#selection_containerleft
+{
+	float: left;
+	padding: 18px;
+	margin: 6px;
+}
+
+div#selection_containerright
+{
+	float: right;
+	padding: 18px;
+	margin: 6px;
+}
+
+div.selection_container
+{
+	padding: 18px;
+	margin: 6px;
+}
+
+div.selection_container:hover
+{
+	background-color: rgba(115,115,115,0.4);
+}
+
+div.selection_text
+{
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+}
 
 /*灰烬之灵*/
 div#huijin
