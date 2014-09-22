@@ -20,104 +20,115 @@
 			<a href="../护甲机制/hujia.html">护甲机制</a>  | 
 			<a href="../魔抗机制/mokang.html">魔抗机制</a>  | 
 			<a href="../游戏概率事件/gailv.html">概率事件</a>  | 
-			<a href="../英雄攻略/gonglue.html">英雄攻略</a>  | 
+			<span class="dropmenu">
+			<a href="../英雄攻略/gonglue.html">英雄攻略</a>
+			<div class="dropmenu_container">
+				<div class="dropmenu_arrow"></div>
+				<div class="dropmenu_text">
+					<div><a href="../英雄攻略/huijin.html">灰烬之灵</a></div>
+					<div><a href="../英雄攻略/shengtang.html">圣堂刺客</a></div>
+				</div>
+			</div>
+			</span>  | 
 			<a href="../表单/biaodan.html">评价表单</a>  | 
 			<a href="../团队介绍/tuandui.html">团队介绍</a> 
 		</div>
 	</div>
 </div>
-<div id="container" style="line-height:30px">	
-		<div id="title" class="darkbg">护甲机制解析</div>	
-  	<div id="hu_text" class="darkbg">
-    	<h3 class="hu">2.4你神话了闪避，还是低估了闪避</h3>
-        <p>
-      我们在谈物理攻击伤害的时候，除了血量和护甲，闪避也是一个重要的物理防御技能(包括来源于技能和物品)。闪避，以一定的概率将敌方的物理攻击无效化，从而达到减免物理伤害的目的。 </p>
-        <p>
-       Dota2拥有闪避属性的物品和技能有，闪避护符、天堂之戟、蝴蝶、PA的模糊、熊猫酒仙的醉拳，以及其他类致盲的技能等等。
-        </p>
-        <div id=ceshi1>
-        <img src="mohu.jpg" width="580" height="176"  alt=""/>
-        </div>
-<p>
-      进入正题，如果你有认真阅读以上章节，那么你应该很清楚护甲是等比提升了有效物理生命值。那么闪避是如何让我们变得更加强壮，更加能经受攻击呢？它和护甲有什么千丝万缕的联系呢？让我们带着这个问题来看下面的简单逻辑推理。
-      </p>
-        <p>
-       闪避以某概率无效化物理攻击，本来10次物理攻击能致死1000血量敌人的，现在对方有了30%的闪避需要15次物理攻击。或者说，本来N次物理攻击能给敌人造成1000点伤害的，现在对方有了闪避N次攻击只造成了700点。
-        </p>
-        <p>
-        所以，我们可以理解为，闪避属性再次以百分比增加了物理有效生命值！！！
-        </p>
-        <p>
-        如果一个敌人原本生命值=S，护甲=H，那么有效生命值为S(1+6%*H)，致死所需要的攻击次数为z；那么当他获得了闪避概率为x的装备(或技能)后，致死所需要的攻击次数Z和原本致死所需攻击次数z的关系是：Z(1-x)=z，即Z=z/(1-x)；
-        </p>
-        <p>
-        因而我们可以看作，有了闪避后，物理有效生命值S(1+6%*H)/(1-x)
-        </p>
-        <p>
-       所以，护甲H和闪避x总共对生命值的提升为
-ΔS= S(1+6%*H)/(1-x)-S=(6%*H+x)S/(1-x)；
-        </p>
-        <p>
-        提升率ΔB=(6%*H+x)/(1-x)
-		</p>
-        <p>
-        那么闪避x对生命值的提升率B(闪避)= (6%*H+x)/(1-x)-6%*H
-        </p>
-      <p>
-       因为每点护甲提升6%有物理效生命值，因此B(闪避)可以转化为增加的护甲值Δh，
-      </p>
-        <p>
-        Δ h=B(闪避)/6%=(6%*H+x)/[(1-x)*6%]- H,即：
-		</p>
-        <div id="ceshi1">
-        <img src="shanbi1.jpg" width="238" height="69"  alt=""/>
-        </div>
-        <div id="ceshi1">
-        <img src="shanbi2.jpg" width="445" height="61"  alt=""/>
-        </div>
-        <p>
-        表示的含义是，当初始护甲为H时，增加x的闪避，相当与增加Δh点护甲。
-        </p>
-        <p>
-        还记得2.3里面最后的结论吗？当初始生命值为S，物理伤害系数为k，初始护甲为H，增加护甲和增加血量的关系吗？s=6%*kSh/(1+6%*H)
-把刚才得出的公式，带入到上式，得到 Δs=xkS/(1-x))
-        </p>
-        <p>
-       表示当初始血量为S，物理伤害系数为k时，获得概率为x的闪避等效于增加了Δs的生命值！！
-		</p>
-        
-        
-        <p>
-        【结论】：
-        </p>
-        <p>
-      	当一个英雄原本生命值为S，护甲为H，物理伤害系数为k时，增加一个x概率的闪避和增加的护甲Δh、增加的血量Δs的关系如下：)
-		</p>
-        <div id="ceshi1">
-   	    <img src="shanbi3.jpg" width="381" height="69"  alt=""/>
-        </div>
-         <div id="ceshi1">
-         <img src="shanbi4.jpg" width="187" height="73"  alt=""/> </div>
-        <div class="artpages">
-        	<div class="pagepos"> 
-            	<div class="pages">
-                	<div><a class="page" href="hujia.html">1 ...</a>
-                    <a class="page" href="hujia3.html">上一页</a>
-                    <a class="page" href="hujia1.html">2</a>
-                    <a class="page" href="hujia2.html">3</a>
-                    <a class="page" href="hujia3.html">4</a>
-                    <a class="page" href="hujia4.html">5</a>
-                   <strong style="border-style:groove">6</strong>
-                    <a class="page" href="hujia6.html">7</a>
-                    <a class="page" href="hujia7.html">8</a>
-                    <a class="page" href="hujia6.html">下一页</a>
-                    <a class="page" href="hujia8.html">... 9</a>
-                   </div>
-            	</div>
+
+<div id="container">	
+	<div id="title" class="darkbg">护甲机制解析</div>	
+	<div id="content">
+		<div id="text_container" class="darkbg">
+			<h3 class="hu">2.4你神话了闪避，还是低估了闪避</h3>
+			<p>
+			我们在谈物理攻击伤害的时候，除了血量和护甲，闪避也是一个重要的物理防御技能(包括来源于技能和物品)。闪避，以一定的概率将敌方的物理攻击无效化，从而达到减免物理伤害的目的。 </p>
+			<p>
+			Dota2拥有闪避属性的物品和技能有，闪避护符、天堂之戟、蝴蝶、PA的模糊、熊猫酒仙的醉拳，以及其他类致盲的技能等等。
+			</p>
+			<div id=ceshi1>
+			<img src="mohu.jpg" width="580" height="176"  alt=""/>
+			</div>
+			<p>
+			进入正题，如果你有认真阅读以上章节，那么你应该很清楚护甲是等比提升了有效物理生命值。那么闪避是如何让我们变得更加强壮，更加能经受攻击呢？它和护甲有什么千丝万缕的联系呢？让我们带着这个问题来看下面的简单逻辑推理。
+			</p>
+			<p>
+			闪避以某概率无效化物理攻击，本来10次物理攻击能致死1000血量敌人的，现在对方有了30%的闪避需要15次物理攻击。或者说，本来N次物理攻击能给敌人造成1000点伤害的，现在对方有了闪避N次攻击只造成了700点。
+			</p>
+			<p>
+			所以，我们可以理解为，闪避属性再次以百分比增加了物理有效生命值！！！
+			</p>
+			<p>
+			如果一个敌人原本生命值=S，护甲=H，那么有效生命值为S(1+6%*H)，致死所需要的攻击次数为z；那么当他获得了闪避概率为x的装备(或技能)后，致死所需要的攻击次数Z和原本致死所需攻击次数z的关系是：Z(1-x)=z，即Z=z/(1-x)；
+			</p>
+			<p>
+			因而我们可以看作，有了闪避后，物理有效生命值S(1+6%*H)/(1-x)
+			</p>
+			<p>
+			所以，护甲H和闪避x总共对生命值的提升为
+			ΔS= S(1+6%*H)/(1-x)-S=(6%*H+x)S/(1-x)；
+			</p>
+			<p>
+			提升率ΔB=(6%*H+x)/(1-x)
+			</p>
+			<p>
+			那么闪避x对生命值的提升率B(闪避)= (6%*H+x)/(1-x)-6%*H
+			</p>
+			<p>
+			因为每点护甲提升6%有物理效生命值，因此B(闪避)可以转化为增加的护甲值Δh，
+			</p>
+			<p>
+			Δ h=B(闪避)/6%=(6%*H+x)/[(1-x)*6%]- H,即：
+			</p>
+			<div id="ceshi1">
+			<img src="shanbi1.jpg" width="238" height="69"  alt=""/>
+			</div>
+			<div id="ceshi1">
+			<img src="shanbi2.jpg" width="445" height="61"  alt=""/>
+			</div>
+			<p>
+			表示的含义是，当初始护甲为H时，增加x的闪避，相当与增加Δh点护甲。
+			</p>
+			<p>
+			还记得2.3里面最后的结论吗？当初始生命值为S，物理伤害系数为k，初始护甲为H，增加护甲和增加血量的关系吗？s=6%*kSh/(1+6%*H)
+			把刚才得出的公式，带入到上式，得到 Δs=xkS/(1-x))
+			</p>
+			<p>
+			表示当初始血量为S，物理伤害系数为k时，获得概率为x的闪避等效于增加了Δs的生命值！！
+			</p>
+
+
+			<p>
+			【结论】：
+			</p>
+			<p>
+			当一个英雄原本生命值为S，护甲为H，物理伤害系数为k时，增加一个x概率的闪避和增加的护甲Δh、增加的血量Δs的关系如下：)
+			</p>
+			<div id="ceshi1">
+			<img src="shanbi3.jpg" width="381" height="69"  alt=""/>
+			</div>
+			<div id="ceshi1">
+			<img src="shanbi4.jpg" width="187" height="73"  alt=""/> </div>
+			<div class="artpages">
+				<div class="pagepos"> 
+					<div class="pages">
+						<a href="hujia.html">1 ...</a>
+						<a href="hujia3.html">上一页</a>
+						<a href="hujia1.html">2</a>
+						<a href="hujia2.html">3</a>
+						<a href="hujia3.html">4</a>
+						<a href="hujia4.html">5</a>
+						<strong>6</strong>
+						<a href="hujia6.html">7</a>
+						<a href="hujia7.html">8</a>
+						<a href="hujia6.html">下一页</a>
+						<a href="hujia8.html">... 9</a>
+					</div>
+				</div>
          	</div>
        </div>
         
-  </div>
+	</div>
   
 </div>
 
@@ -127,7 +138,7 @@
 		<a href="../index.html">
 			<div id="homelink"></div>
 		</a>
-  </div>
+	</div>
 </div>	
 </body>
 </html>

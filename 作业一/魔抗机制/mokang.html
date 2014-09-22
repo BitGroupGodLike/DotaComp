@@ -19,9 +19,18 @@
 		<div id="header_text" class="floatright">
 			<a href="../游戏特色/charactor.html">游戏特色</a> | 
 			<a href="../护甲机制/hujia.html">护甲机制</a>  | 
-			<a href="../魔抗机制/mokang.html">魔抗机制</a>  | 
+			<span class="currentpos"><div id="currentpos_mark"></div>魔抗机制</span>   | 
 			<a href="../游戏概率事件/gailv.html">概率事件</a>  | 
-			<a href="../英雄攻略/gonglue.html">英雄攻略</a>  | 
+			<span class="dropmenu">
+			<a href="../英雄攻略/gonglue.html">英雄攻略</a>
+			<div class="dropmenu_container">
+				<div class="dropmenu_arrow"></div>
+				<div class="dropmenu_text">
+					<div><a href="../英雄攻略/huijin.html">灰烬之灵</a></div>
+					<div><a href="../英雄攻略/shengtang.html">圣堂刺客</a></div>
+				</div>
+			</div>
+			</span>  | 
 			<a href="../表单/biaodan.html">评价表单</a>  | 
 			<a href="../团队介绍/tuandui.html">团队介绍</a> 
 		</div>
@@ -29,20 +38,27 @@
 </div>
 <div id="container">
 	<div id="title" class="darkbg">魔抗机制</div>
-	<div id="mo_text" class="darkbg">
-		<h2 class="cha">一、刀塔魔抗机制简介</h2>
-		<p class="cha"> 
-		技能绚烂的刀塔世界中，魔抗也是很重要的一部分，首先我们要搞清楚魔抗是如何计算的。<br/>
-		魔抗遵循的规则是非线性叠加，游戏中只有增加魔法抗性百分比的装备及技能，因此来源不同的魔法抗性遵循以下叠加规则<br/>
-		假设英雄获得若干个魔法抗性x1、x2、x3...xn；<br/>
-		则英雄总魔抗=1-(1-x1)*(1-x2)*(1-x3)*...*(1-xn)。<br/>
-		例如：敌法师4级被动50%+挑战30%+拉比克4级被动光环20%+基础魔抗25%，<br/>
-		则总魔抗=1-(1-25%)*(1-50%)*(1-30%)*(1-20%)=79%<br/>
-		<div id="mo_image1">
+	<div id="content">
+		<div id="text_container" class="darkbg">
+			<div class="floatright">
 			<img src="../image/魔抗.jpg" width="580" height="349"  alt=""/> 
+			</div>
+			<h2>一、刀塔魔抗机制简介</h2>
+			<p> 
+			技能绚烂的刀塔世界中，魔抗也是很重要的一部分，首先我们要搞清楚魔抗是如何计算的。
+			</p>
+			<p> 
+			魔抗遵循的规则是非线性叠加，游戏中只有增加魔法抗性百分比的装备及技能，因此来源不同的魔法抗性遵循以下叠加规则
+			</p>
+			<p> 
+			假设英雄获得若干个魔法抗性x1、x2、x3...xn；则英雄总魔抗=1-(1-x1)*(1-x2)*(1-x3)*...*(1-xn)。
+			</p>
+			<p> 
+			例如：敌法师4级被动50%+挑战30%+拉比克4级被动光环20%+基础魔抗25%，则总魔抗=1-(1-25%)*(1-50%)*(1-30%)*(1-20%)=79%
+			</p>
+			<br/>
+			<br/>
 		</div>
-		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-		</p>
     </div>
 </div>
 <div id="footer">
