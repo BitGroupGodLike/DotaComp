@@ -529,7 +529,12 @@ body#tuandui
 	background-image: url("image/2c.jpg");
 }
 
-div#show
+div#show_container
+{
+	height: 628px;
+}
+
+div#show_container div.show
 {
 	width: 480px;
 	height: 282px;
@@ -537,7 +542,7 @@ div#show
 	padding: 10px;
 }
 
-div#showtext
+div#show_container div.show div.showtext
 {
 	padding: 0 10px;
 	font-family: Microsoft Yahei;
@@ -545,10 +550,16 @@ div#showtext
 	color: #FFF;
 }
 
-div#showimage
+div#show_container div.show div.showimage
 {
 	margin: 6px;
 	float: right;
+}
+
+p.copyright
+{
+	text-indent: 0em;
+	font-size: 15px;
 }
 
 /* 评价表单 */

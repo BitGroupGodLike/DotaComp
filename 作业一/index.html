@@ -116,8 +116,11 @@
 		
 		var mouseX=0;
 		var mouseY=0;
+		var mouseXA=0;
 		
 		var scrollThusholdWidth=250;
+		var scrollMaxThusholdWidth=600;
+		var scrollSpeed;
 				
 		function switchVideo(state)
 		{
@@ -144,10 +147,15 @@
 		{
 			if(!videoState)
 			{
+				mouseXA=Math.abs(mouseX);
+				scrollSpeed=(mouseXA>scrollMaxThusholdWidth?
+					scrollMaxThusholdWidth-scrollThusholdWidth:
+					mouseXA-scrollThusholdWidth)*0.00015;
+				
 				if(mouseX<-scrollThusholdWidth)
-					scrollPos-=(mouseX+scrollThusholdWidth)*0.00025;
+					scrollPos+=scrollSpeed;
 				if(mouseX>scrollThusholdWidth)
-					scrollPos-=(mouseX-scrollThusholdWidth)*0.00025;			
+					scrollPos-=scrollSpeed;			
 			
 				if(scrollPos<minScrollPos)
 					scrollPos=minScrollPos;
@@ -216,7 +224,7 @@
 	
 		window.onload = function()
 		{
-			window.setInterval("updateScroll()",16.66666667);
+			window.setInterval("updateScroll()",1000/60);
 		}
 		
 		window.onresize = function(e)
