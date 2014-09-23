@@ -41,7 +41,26 @@
 		<img src="image/title.png" alt="DOTA2科学院" />
 	</div>
 	
+	<div id="video_container">
+		<div id="videofloat">
+			<video id="video" width="800" height="450" controls="controls">
+				<source src="video/dota2.mp4" type="video/mp4" />
+				<object data="video/dota2.mp4" width="860" height="640">
+					<embed src="video/dota2.flv" width="860" height="640" />
+				</object>
+			</video>
+		</div>
+		<div id="videodisabler">
+			<a onclick="switchVideo(false)"><div id="videodisabler_button"></div></a>
+		</div>
+	</div>
+	
 	<div id="scrollshow_container">
+		
+		<div class="sscontent">
+			<a onclick="switchVideo(true)"><img class="origin" src="image/cover.jpg" alt="Dota2介绍视频" /></a>
+			<img class="reflect" src="image/cover.jpg" />
+		</div>
 		<div class="sscontent">
 			<a href="charactor/charactor.html"><img class="origin" src="image/charactor.png" alt="游戏特色功能" /></a>
 			<img class="reflect" src="image/charactor.png" />
@@ -78,7 +97,15 @@
 		var ss=document.getElementById("scrollshow_container");
 		var ssc=ss.getElementsByTagName("div");
 		var ssclen=ssc.length;
-				
+		
+		var vc=document.getElementById("video_container");
+		var vd=document.getElementById("video");
+		var tt=document.getElementById("indextitle");
+		
+		var videoState=false;
+		var opacityVideo=0.0;
+		var lastVolume=0.999;
+		
 		var itemSpace=0.6;
 		var showWidth=document.body.clientWidth;
 		
@@ -92,6 +119,11 @@
 		
 		var scrollThusholdWidth=250;
 				
+		function switchVideo(state)
+		{
+			videoState=state;
+		}
+		
 		function setPos(t,pos)
 		{
 			var x=Math.sin(pos*itemSpace);
@@ -110,21 +142,73 @@
 				
 		function updateScroll()
 		{
-			if(mouseX<-scrollThusholdWidth)
-				scrollPos-=(mouseX+scrollThusholdWidth)*0.00025;
-			if(mouseX>scrollThusholdWidth)
-				scrollPos-=(mouseX-scrollThusholdWidth)*0.00025;			
+			if(!videoState)
+			{
+				if(mouseX<-scrollThusholdWidth)
+					scrollPos-=(mouseX+scrollThusholdWidth)*0.00025;
+				if(mouseX>scrollThusholdWidth)
+					scrollPos-=(mouseX-scrollThusholdWidth)*0.00025;			
 			
-			if(scrollPos<minScrollPos)
-				scrollPos=minScrollPos;
-			if(scrollPos>maxScrollPos)
-				scrollPos=maxScrollPos;
+				if(scrollPos<minScrollPos)
+					scrollPos=minScrollPos;
+				if(scrollPos>maxScrollPos)
+					scrollPos=maxScrollPos;
+			}
 			
 			showScrollPos+=(scrollPos-showScrollPos)*0.02;
 			
 			for(var i=0;i<ssclen;++i)
 			{
 				setPos(ssc[i],showScrollPos-i);
+			}
+			
+			if(!videoState)
+			{
+				if(opacityVideo==1.0)
+				{
+					ss.style.display="block";
+					tt.style.display="block";
+					vd.pause();
+				}
+				if(opacityVideo>0.0)
+				{
+					opacityVideo-=0.03;
+					if(opacityVideo<0.0)
+						opacityVideo=0.0;
+				}
+				else
+				{
+					vc.style.display="none";
+					vd.currentTime=0;
+				}
+			}
+			else
+			{
+				if(opacityVideo==0.0)
+				{
+					vd.currentTime=0;
+					vd.play();
+					vc.style.display="block";
+				}
+				if(opacityVideo<1.0)
+				{
+					opacityVideo+=0.02;
+					if(opacityVideo>1.0)
+						opacityVideo=1.0;
+				}
+				else
+				{
+					ss.style.display="none";
+					tt.style.opacity="0.0";
+				}
+			}
+			
+			if(opacityVideo>0.0)
+				vc.style.opacity=""+(opacityVideo);
+			if(opacityVideo<1.0)
+			{
+				ss.style.opacity=""+2*(1-opacityVideo);
+				tt.style.opacity=""+(1-opacityVideo);
 			}
 			//document.getElementById("sscontent").style.left=(Math.sin(frame*0.05)*100)+"px";
 			frame++;

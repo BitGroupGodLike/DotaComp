@@ -455,6 +455,7 @@ div#scrollshow_container img.origin:hover
 {
 	width: 100%;
 	box-shadow: 0 0 15px #FFFFDD;
+	cursor: hand;
 }
 
 div#scrollshow_container img.reflect
@@ -468,6 +469,50 @@ div#scrollshow_container img.reflect
     filter: flipv;
     opacity: 0.5;
     filter: alpha(opacity='50');
+}
+
+div#video_container
+{
+	position: relative;
+	width: 800px;
+	margin: 0px auto;
+	display: none;
+}
+
+div#videofloat
+{
+	position: absolute;
+	top: -140px;
+	left: 0px;
+	z-index: 17;
+}
+
+div#videodisabler
+{
+	position: absolute;
+	top: -140px;
+	left: 780px;
+	z-index: 25;
+}
+
+div#videodisabler_button
+{
+	width: 20px;
+	height: 16px;
+	z-index: 25;
+	background-image: url("image/minimize.png");
+}
+
+div#videodisabler_button:hover
+{
+	background-image: url("image/minimize.png");
+	cursor: hand;
+}
+
+div#videodisabler_button:active
+{
+	background-image: url("image/minimize_active.png");
+	cursor: hand;
 }
 
 /* 团队介绍 */
