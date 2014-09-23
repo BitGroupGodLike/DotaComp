@@ -11,6 +11,7 @@ body, div, img, h1, h2, h3
 
 body
 {
+	position: relative;
 	margin: 0px;
 	padding: 0px;
 	background-position: center;
@@ -168,6 +169,7 @@ div.pages strong
 div#header
 {
 	height: 34px;
+	min-width: 1024px;
 	padding-bottom: 6px;
 	background-image: url("image/header.png");
 	background-position: bottom center;
@@ -178,13 +180,18 @@ div#container
 	width: 1024px;
 	position: relative;
 	overflow: hidden;
-	margin-left:auto;
-	margin-right:auto;
+	margin-left: auto;
+	margin-right: auto;
 	padding: 20px 0px;
+	padding-bottom: 130px;
 }
 
 div#footer
 {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	min-width: 1024px;
 	height: 130px;
 	background-image: url("image/footer.png");
 	background-position: top center;
@@ -300,7 +307,7 @@ div#homelinkbox
 div#homelink
 {
 	height: 96px;
-	margin: 22px auto;
+	margin: 22px auto 0px auto;
 }
 
 /* 滑动样式 */
