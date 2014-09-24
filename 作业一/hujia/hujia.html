@@ -37,150 +37,150 @@
 </div>
 <div id="container">	
 	<div id="title" class="darkbg">护甲机制解析</div>
-		<div id="content">
-			<div id="text_container" class="darkbg">
-				<h2>一、dota2护甲机制的真面目</h2>
-				<h3>1.1dota2护甲计算公式</h3>
-				<p>
-				公式：护甲值*6%/(1+护甲值*6%)
-				</p>
-				<div class="centerpos">
-					<table width="auto" border="1" cellpadding="10">
-					<tr>
-					<td>护甲</td>
-					<td>0</td>
-					<td>1</td>
-					<td>2</td>
-					<td>3</td>
-					<td>4</td>
-					<td>5</td>
-					<td>6</td>
-					<td>7</td>
-					<td>8</td>
-					<td>9</td>
-					<td>10</td>
-					</tr>
-					<tr>
-					<td>减伤比例</td>
-					<td>0.00%</td>
-					<td>5.66%</td>
-					<td>10.71%</td>
-					<td>15.25%</td>
-					<td>19.35%</td>
-					<td>23.08%</td>
-					<td>26.47%</td>
-					<td>29.58%</td>
-					<td>32.43%</td>
-					<td>35.06%</td>
-					<td>37.50%</td>
-					</tr>
-					</table>
-				</div>
-				<h3>1.2如何理解护甲公式</h3>
+	<div id="content">
+		<div id="text_container" class="darkbg">
+			<h2>一、dota2护甲机制的真面目</h2>
+			<h3>1.1dota2护甲计算公式</h3>
 			<p>
-				从该公式中我们可以知道一点，Dota创世者(或者追溯到War创世者)已经定义了，每点护甲提供的格挡物理伤害百分比是等效的，这句话与“每点护甲提供的有效物理生命值是完全相同的”的意思完全相同！而且这个这个百分比是每点护甲6%！
+			公式：护甲值*6%/(1+护甲值*6%)
 			</p>
-				<div class="centerpos">
-				  <table width="auto" border="1" cellpadding="4">
-			<tr>
-			<td width="49" height="39">护甲与生命</td>
-			<td width="40">生命值</td>
-			<td width="26">护甲</td>
-			<td width="99">每点护甲提供的有效物理生命百分比</td>
-			<td width="86">每点护甲提供的有效物理生命值</td>
-			<td width="75">有效总生命值</td>
-			<td width="35">攻击力</td>
-			<td width="86">致死次数</td>
-			<td width="96">实际每次伤害</td>
-			<td width="111">实际每次减少伤害</td>
-			<td width="91">减伤百分比</td>
-			</tr>
-			<tr>
-			<td>变量名</td>
-			<td>S</td>
-			<td>H</td>
-			<td>b</td>
-			<td>A</td>
-			<td>Y</td>
-			<td>G</td>
-			<td>Z</td>
-			<td>g</td>
-			<td>J</td>
-			<td>B</td>
-			</tr>
-			<tr>
-			<td>公式</td>
-			<td>S</td>
-			<td>H</td>
-			<td>b</td>
-			<td>b*S</td>
-			<td>S+S*b*H</td>
-			<td>G</td>
-			<td>Y/G</td>
-			<td>S/Z</td>
-			<td>G-g</td>
-			<td>J/G</td>
-			</tr>
-			<tr>
-			<td>化简</td>
-			<td>S</td>
-			<td>H</td>
-			<td>b</td>
-			<td>b*S</td>
-			<td>S*(1+b*H)</td>
-			<td>G</td>
-			<td>S*(1+b*H)/G</td>
-			<td>G/(1+b*H)</td>
-			<td>G*b*h/(1+b*H)</td>
-			<td>b*H/(1+b*H)</td>
-			</tr>
-			<tr>
-			<td>举例1</td>
-			<td>10000</td>
-			<td>1</td>
-			<td>6%</td>
-			<td>60</td>
-			<td>10600</td>
-			<td>100</td>
-			<td>106</td>
-			<td>94.34</td>
-			<td>5.66</td>
-			<td>5.66%</td>
-			</tr>
-			<tr>
-			<td>举例2</td>
-			<td>10000</td>
-			<td>10</td>
-			<td>6%</td>
-			<td>60</td>
-			<td>16000</td>
-			<td>99</td>
-			<td>161.62</td>
-			<td>61.88</td>
-			<td>37.13</td>
-			<td>37.50%</td>
-			</tr>
-			<tr>
-			<td>举例3</td>
-			<td>10000</td>
-			<td>25</td>
-			<td>6%</td>
-			<td>60</td>
-			<td>25000</td>
-			<td>100</td>
-			<td>250</td>
-			<td>40.00</td>
-			<td>60.00</td>
-			<td>60.00%</td>
-			</tr>
-			</table>
+			<div class="centerpos">
+				<table width="auto" border="1" cellpadding="10">
+				<tr>
+				<td>护甲</td>
+				<td>0</td>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+				<td>7</td>
+				<td>8</td>
+				<td>9</td>
+				<td>10</td>
+				</tr>
+				<tr>
+				<td>减伤比例</td>
+				<td>0.00%</td>
+				<td>5.66%</td>
+				<td>10.71%</td>
+				<td>15.25%</td>
+				<td>19.35%</td>
+				<td>23.08%</td>
+				<td>26.47%</td>
+				<td>29.58%</td>
+				<td>32.43%</td>
+				<td>35.06%</td>
+				<td>37.50%</td>
+				</tr>
+				</table>
+			</div>
+			<h3>1.2如何理解护甲公式</h3>
+			<p>
+			从该公式中我们可以知道一点，Dota创世者(或者追溯到War创世者)已经定义了，每点护甲提供的格挡物理伤害百分比是等效的，这句话与“每点护甲提供的有效物理生命值是完全相同的”的意思完全相同！而且这个这个百分比是每点护甲6%！
+			</p>
+			<div class="centerpos">
+				<table width="auto" border="1" cellpadding="4">
+				<tr>
+				<td width="49" height="39">护甲与生命</td>
+				<td width="40">生命值</td>
+				<td width="26">护甲</td>
+				<td width="99">每点护甲提供的有效物理生命百分比</td>
+				<td width="86">每点护甲提供的有效物理生命值</td>
+				<td width="75">有效总生命值</td>
+				<td width="35">攻击力</td>
+				<td width="86">致死次数</td>
+				<td width="96">实际每次伤害</td>
+				<td width="111">实际每次减少伤害</td>
+				<td width="91">减伤百分比</td>
+				</tr>
+				<tr>
+				<td>变量名</td>
+				<td>S</td>
+				<td>H</td>
+				<td>b</td>
+				<td>A</td>
+				<td>Y</td>
+				<td>G</td>
+				<td>Z</td>
+				<td>g</td>
+				<td>J</td>
+				<td>B</td>
+				</tr>
+				<tr>
+				<td>公式</td>
+				<td>S</td>
+				<td>H</td>
+				<td>b</td>
+				<td>b*S</td>
+				<td>S+S*b*H</td>
+				<td>G</td>
+				<td>Y/G</td>
+				<td>S/Z</td>
+				<td>G-g</td>
+				<td>J/G</td>
+				</tr>
+				<tr>
+				<td>化简</td>
+				<td>S</td>
+				<td>H</td>
+				<td>b</td>
+				<td>b*S</td>
+				<td>S*(1+b*H)</td>
+				<td>G</td>
+				<td>S*(1+b*H)/G</td>
+				<td>G/(1+b*H)</td>
+				<td>G*b*h/(1+b*H)</td>
+				<td>b*H/(1+b*H)</td>
+				</tr>
+				<tr>
+				<td>举例1</td>
+				<td>10000</td>
+				<td>1</td>
+				<td>6%</td>
+				<td>60</td>
+				<td>10600</td>
+				<td>100</td>
+				<td>106</td>
+				<td>94.34</td>
+				<td>5.66</td>
+				<td>5.66%</td>
+				</tr>
+				<tr>
+				<td>举例2</td>
+				<td>10000</td>
+				<td>10</td>
+				<td>6%</td>
+				<td>60</td>
+				<td>16000</td>
+				<td>99</td>
+				<td>161.62</td>
+				<td>61.88</td>
+				<td>37.13</td>
+				<td>37.50%</td>
+				</tr>
+				<tr>
+				<td>举例3</td>
+				<td>10000</td>
+				<td>25</td>
+				<td>6%</td>
+				<td>60</td>
+				<td>25000</td>
+				<td>100</td>
+				<td>250</td>
+				<td>40.00</td>
+				<td>60.00</td>
+				<td>60.00%</td>
+				</tr>
+				</table>
 
-			  
-				</div>
-				 <br>
-			  <p>
-			 上表已经诠释了Dota的护甲机制，公式只是结果，意味着任意一点护甲提供的有效物理生命值都是等效的。换句话说，0点护甲提升1点护甲，和100点护甲再提升1点护甲，2种情况中新增的1点护甲的效果是完全相等的！
-			  </p>
+		  
+			</div>
+			<br>
+			<p>
+			上表已经诠释了Dota的护甲机制，公式只是结果，意味着任意一点护甲提供的有效物理生命值都是等效的。换句话说，0点护甲提升1点护甲，和100点护甲再提升1点护甲，2种情况中新增的1点护甲的效果是完全相等的！
+			</p>
 			<div class="artpages">
 				<div class="pagepos"> 
 					<div class="pages">
@@ -198,7 +198,6 @@
 				</div>
 			</div>
 		</div>
-
 	</div>
 </div>
 	 
