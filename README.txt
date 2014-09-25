@@ -1,4 +1,3 @@
-GodLikeÐ¡×é
-±±Àí¹¤2014ÄêÐ¡Ñ§ÆÚ
-ÍøÕ¾¿ª·¢¿ÎÌâ
-ÎÒÃÇµÄÍøÖ·£ºhttp://dotacomp.tk/index.html
+GodLikeå°ç»„
+åŒ—ç†å·¥2014å¹´å°å­¦æœŸ
+ç½‘ç«™å¼€å‘è¯¾é¢˜
